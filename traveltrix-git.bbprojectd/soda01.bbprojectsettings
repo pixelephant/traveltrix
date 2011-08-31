@@ -13,7 +13,32 @@
 	<key>FileFilterID:soda01</key>
 	<string>msng</string>
 	<key>OpenDocuments:soda01</key>
-	<array/>
+	<array>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAGKAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			eaQ4SCsAAAJsZhoJaW5kZXgucGhwAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxm
+			WcmmROMAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAADnRy
+			YXZlbHRyaXgtZ2l0ABAACAAAyXmWKAAAABEACAAAyaY20wAAAAEA
+			EAJsZhoACHyTAAh8jAAAl+0AAgA8TWFjaW50b3NoIEhEOlVzZXJz
+			OgBzb2RhMDE6AFNpdGVzOgB0cmF2ZWx0cml4LWdpdDoAaW5kZXgu
+			cGhwAA4AFAAJAGkAbgBkAGUAeAAuAHAAaABwAA8AGgAMAE0AYQBj
+			AGkAbgB0AG8AcwBoACAASABEABIAK1VzZXJzL3NvZGEwMS9TaXRl
+			cy90cmF2ZWx0cml4LWdpdC9pbmRleC5waHAAABMAAS8AABUAAgAN
+			//8AAA==
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/soda01/Sites/traveltrix-git/index.php</string>
+			<key>RelativePath</key>
+			<string>./index.php</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
 	<key>OpenDocumentsExpanded</key>
 	<true/>
 	<key>OpenDocumentsVisible</key>
@@ -21,7 +46,36 @@
 	<key>ProjectViewVisible</key>
 	<true/>
 	<key>RecentItems:soda01</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Date</key>
+			<date>2011-08-31T20:09:06Z</date>
+			<key>Location</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAGKAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJeaQ4SCsAAAJsZhoJaW5kZXgucGhwAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAmxmWcmmROMAAAAAAAAAAP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAADnRyYXZlbHRyaXgt
+				Z2l0ABAACAAAyXmWKAAAABEACAAAyaY20wAAAAEAEAJs
+				ZhoACHyTAAh8jAAAl+0AAgA8TWFjaW50b3NoIEhEOlVz
+				ZXJzOgBzb2RhMDE6AFNpdGVzOgB0cmF2ZWx0cml4LWdp
+				dDoAaW5kZXgucGhwAA4AFAAJAGkAbgBkAGUAeAAuAHAA
+				aABwAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABE
+				ABIAK1VzZXJzL3NvZGEwMS9TaXRlcy90cmF2ZWx0cml4
+				LWdpdC9pbmRleC5waHAAABMAAS8AABUAAgAN//8AAA==
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/soda01/Sites/traveltrix-git/index.php</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+	</array>
 	<key>RecentItemsExpanded</key>
 	<true/>
 	<key>RecentItemsVisible</key>
