@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HierarchyData</key>
+	<array>
+		<string>3F1DCC12-1FA6-4016-BE51-C79E2349DFAD</string>
+	</array>
+	<key>ProjectItems</key>
+	<dict>
+		<key>3F1DCC12-1FA6-4016-BE51-C79E2349DFAD</key>
+		<dict>
+			<key>ItemData</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAF0AAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJeaQ4SCsAAAAIfJMOdHJhdmVsdHJpeC1naXQA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAmxmGsqEXmoAAAAAAAAAAP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAABVNpdGVzAAAQAAgA
+				AMl5ligAAAARAAgAAMqEQkoAAAABAAwACHyTAAh8jAAA
+				l+0AAgAxTWFjaW50b3NoIEhEOlVzZXJzOgBzb2RhMDE6
+				AFNpdGVzOgB0cmF2ZWx0cml4LWdpdAAADgAeAA4AdABy
+				AGEAdgBlAGwAdAByAGkAeAAtAGcAaQB0AA8AGgAMAE0A
+				YQBjAGkAbgB0AG8AcwBoACAASABEABIAIVVzZXJzL3Nv
+				ZGEwMS9TaXRlcy90cmF2ZWx0cml4LWdpdAAAEwABLwAA
+				FQACAA3//wAA
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/soda01/Sites/traveltrix-git/</string>
+				<key>RelativePath</key>
+				<string>./traveltrix-git</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+			<key>ItemName</key>
+			<string>traveltrix-git</string>
+			<key>ItemType</key>
+			<string>FolderReference</string>
+		</dict>
+	</dict>
+	<key>com.barebones.DocumentFormatVersion</key>
+	<integer>5</integer>
+	<key>com.barebones.DocumentType</key>
+	<string>Project</string>
+</dict>
+</plist>

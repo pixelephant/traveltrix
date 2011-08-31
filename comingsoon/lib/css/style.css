@@ -1,0 +1,421 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@font-face {
+    font-family: 'ArialRounded';
+    src: url('../fonts/arlrdbd-webfont.eot');
+    src: url('../fonts/arlrdbd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/arlrdbd-webfont.woff') format('woff'),
+         url('../fonts/arlrdbd-webfont.ttf') format('truetype'),
+         url('../fonts/arlrdbd-webfont.svg#ArialRoundedMTBoldRegular') format('svg');
+         font-weight: normal;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: 'Swis';
+    src: url('../fonts/swz721l-webfont.eot');
+    src: url('../fonts/swz721l-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/swz721l-webfont.woff') format('woff'),
+         url('../fonts/swz721l-webfont.ttf') format('truetype'),
+         url('../fonts/swz721l-webfont.svg#Swis721LtBTLight') format('svg');
+         font-weight: normal;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyriadProBold';
+    src: url('../fonts/myriadpro-bold-webfont.eot');
+    src: url('../fonts/myriadpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/myriadpro-bold-webfont.woff') format('woff'),
+         url('../fonts/myriadpro-bold-webfont.ttf') format('truetype'),
+         url('../fonts/myriadpro-bold-webfont.svg#MyriadProBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MyriadProItalic';
+    src: url('../fonts/myriadpro-it_opentype-webfont.eot');
+    src: url('../fonts/myriadpro-it_opentype-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/myriadpro-it_opentype-webfont.woff') format('woff'),
+         url('../fonts/myriadpro-it_opentype-webfont.ttf') format('truetype'),
+         url('../fonts/myriadpro-it_opentype-webfont.svg#MyriadProItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'MyriadWebProRegular';
+    src: url('../fonts/myriadwebpro-webfont.eot');
+    src: url('../fonts/myriadwebpro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/myriadwebpro-webfont.woff') format('woff'),
+         url('../fonts/myriadwebpro-webfont.ttf') format('truetype'),
+         url('../fonts/myriadwebpro-webfont.svg#MyriadWebProRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'JeanLucBold';
+    src: url('../fonts/jeanluc-bold-webfont.eot');
+    src: url('../fonts/jeanluc-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/jeanluc-bold-webfont.woff') format('woff'),
+         url('../fonts/jeanluc-bold-webfont.ttf') format('truetype'),
+         url('../fonts/jeanluc-bold-webfont.svg#JeanLucBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html,body{
+	width:100%;
+	height:100%;
+	font-family:MyriadWebProRegular;
+	padding-top:15px;
+}
+
+body{
+	background: url(../../img/bg.png) no-repeat center #1f1917;
+}
+
+#header{
+	width:960px;
+	margin:0 auto;
+	height:73px;
+	overflow:hidden;
+}
+
+#header .left{
+	background: url(../../img/header_left.png) no-repeat;
+	width:10px;
+	height:73px;
+	float:left;
+}
+
+#header .right{
+	background: url(../../img/header_right.png) no-repeat;
+	width:10px;
+	height:73px;
+	float:left;
+}
+
+#header .inner{
+	background:url(../../img/header_repeat.png) repeat;
+	float:left;
+	width:940px;
+	height:73px;
+}
+
+#header .inner div{
+	background: url(../../img/stamps1.png) no-repeat top right;
+	width:940px;
+	height:73px;
+	overflow:hidden;
+	line-height:18px;
+}
+
+#header img{
+	float:left;
+}
+
+#header h1{
+	font-family:ArialRounded;
+	float:left;
+	margin-top:24px;
+	font-size:24px;
+}
+
+#header h2{
+	font-family:Swis;
+	display:block;
+	margin-top:29px;
+	font-size:12px;
+}
+
+
+#promo{
+	width:980px;
+	margin:0 auto;
+	overflow:hidden;
+	height:300px;
+	background:url(../../img/math_pattern.png) repeat;
+}
+
+#promo .left, #promo .right{
+	float:left;
+	width:450px;
+    padding:20px;
+}
+
+#promo .left h2,#forms h2{
+	font-family:JeanLucBold;
+	color:#685035;
+	font-size:44px;
+}
+
+#promo .left p{
+	margin-top:15px;
+	font-size:17px;
+	line-height:1.3;
+	color:#425535;
+}
+
+#promo .right{
+	text-align:center;
+}
+
+#qoute, #more{
+	font-family:MyriadProItalic;
+	margin:0 auto;
+	width:1002px;
+	height:75px;
+	font-size:16px;
+	color:#eee;
+	overflow:hidden;
+	top:-12px;
+	position:relative;
+}
+
+#qoute .left, #more .left{
+	width:11px;
+	background: url(../../img/separator_left.png) no-repeat;
+	height:75px;
+	float:left;
+}
+
+#qoute p, #more p{
+	float:left;
+	background:#3d4934;
+	margin-top:12px;
+	width:964px;
+	height:63px;
+	text-align:justify;
+	padding:15px 8px 0 8px;
+}
+
+#qoute .right,#more .right{
+	width:11px;
+	background: url(../../img/separator_right.png) no-repeat;
+	height:75px;
+	float:left;
+}
+
+#forms{
+	width:940px;
+	margin:0 auto;
+	overflow:hidden;
+	background:url(../../img/leather_pattern.png) repeat;
+	padding:20px;
+	margin-top:-12px;
+}
+
+#forms div{
+	margin-top:20px;
+	width:313.333333333px;
+	float:left;
+}
+
+#forms div h3{
+	font-family:JeanLucBold;
+	color:#425535;
+	font-size:24px;
+	margin-bottom:5px;
+	height:50px;
+}
+
+#forms div p{
+	font-size:14px;
+	color:#425535;
+	width:300px;
+	height:60px;
+	line-height:1.2;
+}
+
+#forms label{
+	font-size:14px;
+	color:#685035;
+	display:block;
+}
+
+#forms input{
+	width:150px;
+}
+
+.css3button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #c3a17b;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #c3a17b;
+	box-shadow:inset 0px 1px 0px 0px #c3a17b;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c3a17b), color-stop(1, #685035) );
+	background:-moz-linear-gradient( center top, #c3a17b 5%, #685035 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3a17b', endColorstr='#685035');
+	background-color:#c3a17b;
+	border:1px solid #685035;
+	display:inline-block;
+	color:#ffffff;
+	font-family:MyriadWebProRegular;
+	font-size:12px;
+	padding:4px 17px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #685035;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:4px;
+	width:75px !important;
+	cursor:pointer;
+}
+.css3button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #685035), color-stop(1, #c3a17b) );
+	background:-moz-linear-gradient( center top, #685035 5%, #c3a17b 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#685035', endColorstr='#c3a17b');
+	background-color:#685035;
+}
+.css3button:active {
+	position:relative;
+	top:1px;
+}
+
+
+#about{
+	width:920px;
+	margin:0 auto;
+	overflow:hidden;
+	background:url(../../img/header_repeat.png) repeat;
+	padding:20px;
+}
+
+#about a{
+	display:block;
+	float:left;
+	margin:0 10px;
+	text-decoration:none;
+	color:#513f2b;
+	height:15px;
+	line-height:15px;
+}
+
+#more{
+	width:983px;
+}
+
+#more p{
+	width:961px;
+	padding:15px 0;
+	text-align:center;
+}
+
+#more a{
+	text-decoration:none;
+	font-size:30px;
+	color:white;
+	font-family:JeanLucBold;
+	position:relative;
+	top:-10px;
+}
+
+#more img{
+	margin:5px;
+}
+
+#more-text{
+	display:none;
+	width:940px;
+	margin:0 auto;
+	padding:20px;
+	background:white;
+	position:relative;
+	top:-12px;
+	background:url(../../img/math_pattern.png) repeat;
+}
+
+#more-text h2{
+	text-align:center;
+	font-family:JeanLucBold;
+	color:#685035;
+	font-size:34px;
+	margin:10px 0;
+}
+
+#more-text h3{
+	font-family:JeanLucBold;
+	color:#425535;
+	font-size:24px;
+	margin:10px 0;
+}
+
+#more-text p{
+	margin:5px 0;
+	line-height:1.2;
+}
+
+#more-text ul{
+	margin-top:5px;
+}
+
+#more-text ul li{
+	list-style:disc;
+	list-style-position:inside;
+}
+
+#more-text strong{
+	font-weight:bold;
+}
+
+#footer{
+	width:980px;
+	margin:0 auto;
+	text-align:center;
+	color:#6f8063;
+	padding:10px 0;
+}
+
+.asterisk{
+	color:red;
+}
+
+.msg,.error{
+	font-size:12px;
+	width:auto !important;
+	height:auto !important;
+}
+
+.error{
+	color:red !important;
+}
