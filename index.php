@@ -23,7 +23,7 @@
 	<header>
 		<nav>
 			<ul class="clearfix">
-				<li><a href="#">Első</a></li>
+				<li class="active"><a href="#">Első</a></li>
 				<li><a href="#">Második</a></li>
 				<li><a href="#">Harmadik</a></li>
 				<li id="logo"><img src="img/logo.png" alt="Traveltrix logo" /></li>
@@ -96,10 +96,13 @@
 	</div>
 	<div class="sectionwrap" id="ctawrap">
 		<section id="cta">
-				<h2>Be akar lépni a bizniszbe?</h2>
-				<a href="#">Kapcsolat</a>
+				<h2>Biznisz?</h2>
+				<div class="glow">
+					<a href="#">Kapcsolat</a>
+				</div>
 		</section>
 	</div>
+	<div class="teeth-down"></div>
 	<section id="contact">
 		<h1>Lorem ipsum dolor sit amet, consectetur?</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
@@ -107,6 +110,7 @@
 			
 		</form>
 	</section>
+	<div class="teeth-up"></div>
 	<footer>
 		<section id="footer">
 			<a href="http://twitter.com/">t</a>

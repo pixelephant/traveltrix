@@ -9,36 +9,74 @@
 	<key>ExpandedItems:soda01</key>
 	<array>
 		<string>3F1DCC12-1FA6-4016-BE51-C79E2349DFAD</string>
-	</array>
-	<key>FileFilterID:soda01</key>
-	<string>msng</string>
-	<key>OpenDocuments:soda01</key>
-	<array>
 		<dict>
 			<key>AliasData</key>
 			<data>
-			AAAAAAGKAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			eaQ4SCsAAAJsZhoJaW5kZXgucGhwAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAFyAAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			eaQ4SCsAAAJsZhoDbGliAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxm
-			WcmmROMAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAADnRy
-			YXZlbHRyaXgtZ2l0ABAACAAAyXmWKAAAABEACAAAyaY20wAAAAEA
-			EAJsZhoACHyTAAh8jAAAl+0AAgA8TWFjaW50b3NoIEhEOlVzZXJz
-			OgBzb2RhMDE6AFNpdGVzOgB0cmF2ZWx0cml4LWdpdDoAaW5kZXgu
-			cGhwAA4AFAAJAGkAbgBkAGUAeAAuAHAAaABwAA8AGgAMAE0AYQBj
-			AGkAbgB0AG8AcwBoACAASABEABIAK1VzZXJzL3NvZGEwMS9TaXRl
-			cy90cmF2ZWx0cml4LWdpdC9pbmRleC5waHAAABMAAS8AABUAAgAN
-			//8AAA==
+			WsmmPnQAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAADnRy
+			YXZlbHRyaXgtZ2l0ABAACAAAyXmWKAAAABEACAAAyaYwZAAAAAEA
+			EAJsZhoACHyTAAh8jAAAl+0AAgA2TWFjaW50b3NoIEhEOlVzZXJz
+			OgBzb2RhMDE6AFNpdGVzOgB0cmF2ZWx0cml4LWdpdDoAbGliAA4A
+			CAADAGwAaQBiAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABE
+			ABIAJVVzZXJzL3NvZGEwMS9TaXRlcy90cmF2ZWx0cml4LWdpdC9s
+			aWIAABMAAS8AABUAAgAN//8AAA==
 			</data>
 			<key>FileURL</key>
-			<string>file://localhost/Users/soda01/Sites/traveltrix-git/index.php</string>
-			<key>RelativePath</key>
-			<string>./index.php</string>
+			<string>file://localhost/Users/soda01/Sites/traveltrix-git/lib/</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAF2AAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			eaQ4SCsAAAJsZloDY3NzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxm
+			rMmmRZkAAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2xp
+			YgAAEAAIAADJeZYoAAAAEQAIAADJpjeJAAAAAQAUAmxmWgJsZhoA
+			CHyTAAh8jAAAl+0AAgA7TWFjaW50b3NoIEhEOlVzZXJzOgBzb2Rh
+			MDE6AFNpdGVzOgB0cmF2ZWx0cml4LWdpdDoAbGliOgBjc3MAAA4A
+			CAADAGMAcwBzAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABE
+			ABIAKVVzZXJzL3NvZGEwMS9TaXRlcy90cmF2ZWx0cml4LWdpdC9s
+			aWIvY3NzAAATAAEvAAAVAAIADf//AAA=
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/soda01/Sites/traveltrix-git/lib/css/</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAFwAAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			eaQ4SCsAAAJsZloCanMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxm
+			0cmmQa8AAAAAAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2xp
+			YgAAEAAIAADJeZYoAAAAEQAIAADJpjOfAAAAAQAUAmxmWgJsZhoA
+			CHyTAAh8jAAAl+0AAgA6TWFjaW50b3NoIEhEOlVzZXJzOgBzb2Rh
+			MDE6AFNpdGVzOgB0cmF2ZWx0cml4LWdpdDoAbGliOgBqcwAOAAYA
+			AgBqAHMADwAaAAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgAo
+			VXNlcnMvc29kYTAxL1NpdGVzL3RyYXZlbHRyaXgtZ2l0L2xpYi9q
+			cwATAAEvAAAVAAIADf//AAA=
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/soda01/Sites/traveltrix-git/lib/js/</string>
 			<key>TypeID</key>
 			<string>_CFileLocator</string>
 			<key>Version</key>
 			<integer>1</integer>
 		</dict>
 	</array>
+	<key>FileFilterID:soda01</key>
+	<string>msng</string>
+	<key>OpenDocuments:soda01</key>
+	<array/>
 	<key>OpenDocumentsExpanded</key>
 	<true/>
 	<key>OpenDocumentsVisible</key>
@@ -49,6 +87,64 @@
 	<array>
 		<dict>
 			<key>Date</key>
+			<date>2011-08-31T20:15:41Z</date>
+			<key>Location</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAGaAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJeaQ4SCsAAAJsZqwJc3R5bGUuY3NzAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAmxmrsmmRkZURVhUAAAAAP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAAA2NzcwAAEAAIAADJ
+				eZYoAAAAEQAIAADJpjg2AAAAAQAYAmxmrAJsZloCbGYa
+				AAh8kwAIfIwAAJftAAIARk1hY2ludG9zaCBIRDpVc2Vy
+				czoAc29kYTAxOgBTaXRlczoAdHJhdmVsdHJpeC1naXQ6
+				AGxpYjoAY3NzOgBzdHlsZS5jc3MADgAUAAkAcwB0AHkA
+				bABlAC4AYwBzAHMADwAaAAwATQBhAGMAaQBuAHQAbwBz
+				AGgAIABIAEQAEgAzVXNlcnMvc29kYTAxL1NpdGVzL3Ry
+				YXZlbHRyaXgtZ2l0L2xpYi9jc3Mvc3R5bGUuY3NzAAAT
+				AAEvAAAVAAIADf//AAA=
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/soda01/Sites/traveltrix-git/lib/css/style.css</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Date</key>
+			<date>2011-08-31T20:10:57Z</date>
+			<key>Location</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAGOAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJeaQ4SCsAAAJsZtEHbWFpbi5qcwAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAmxm08mmQ/ZURVhUAAAAAP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAAAmpzABAACAAAyXmW
+				KAAAABEACAAAyaY15gAAAAEAGAJsZtECbGZaAmxmGgAI
+				fJMACHyMAACX7QACAENNYWNpbnRvc2ggSEQ6VXNlcnM6
+				AHNvZGEwMToAU2l0ZXM6AHRyYXZlbHRyaXgtZ2l0OgBs
+				aWI6AGpzOgBtYWluLmpzAAAOABAABwBtAGEAaQBuAC4A
+				agBzAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABE
+				ABIAMFVzZXJzL3NvZGEwMS9TaXRlcy90cmF2ZWx0cml4
+				LWdpdC9saWIvanMvbWFpbi5qcwATAAEvAAAVAAIADf//
+				AAA=
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/soda01/Sites/traveltrix-git/lib/js/main.js</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Date</key>
 			<date>2011-08-31T20:09:06Z</date>
 			<key>Location</key>
 			<dict>
@@ -57,7 +153,7 @@
 				AAAAAAGKAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
 				AAAAAADJeaQ4SCsAAAJsZhoJaW5kZXgucGhwAAAAAAAA
 				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAmxmWcmmROMAAAAAAAAAAP//
+				AAAAAAAAAAAAAAAAAAAAAmxmWcmmRONURVhUAAAAAP//
 				//8AAAkgAAAAAAAAAAAAAAAAAAAADnRyYXZlbHRyaXgt
 				Z2l0ABAACAAAyXmWKAAAABEACAAAyaY20wAAAAEAEAJs
 				ZhoACHyTAAh8jAAAl+0AAgA8TWFjaW50b3NoIEhEOlVz
