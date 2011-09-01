@@ -15,7 +15,6 @@
 		<title>Traveltrix - Be far. Feel home.</title>
 		
 		<link rel="stylesheet" href="lib/css/style.css" />
-		<link rel="stylesheet" href="lib/nivotheme/default.css" />
 		
 		<script src="lib/js/modernizr-2.min.js"></script>
 	</head>
@@ -23,12 +22,9 @@
 	<header>
 		<nav>
 			<ul class="clearfix">
-				<li><a href="#">Első</a></li>
-				<li><a href="#">Második</a></li>
-				<li><a href="#">Harmadik</a></li>
-				<li><a href="#">Negyedik</a></li>
-				<li><a href="#">Ötödik</a></li>
-				<li><a href="#">Hatodik</a></li>
+				<li><a href="#features">Features</a></li>
+				<li><a href="#quotes">Quotes</a></li>
+				<li><a href="#cta">Cta</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -44,9 +40,11 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
 			<div class="glow">
 					<a href="#">Bizniszeink</a>
-					vagy
-					<a href="">rólunk</a>
 			</div>
+			<span>
+				vagy
+				<a href="">Olvasson rólunk</a>
+			</span>
 		</div>
 	</section>
 	<section id="features">
@@ -58,6 +56,7 @@
 		<div class="feature right">
 			<h1>Feature 2</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+			<a href="#" class="open-details">+</a>
 		</div>
 		<div class="detail">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
@@ -67,10 +66,12 @@
 		<div class="feature">
 			<h1>Feature 3</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+			<a href="#" class="open-details">+</a>
 		</div>	
 		<div class="feature right">
 			<h1>Feature 4</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+			<a href="#" class="open-details">+</a>
 		</div>
 		<div class="detail">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
@@ -102,7 +103,7 @@
 	</div>
 	<div class="sectionwrap" id="ctawrap">
 		<section id="cta">
-				<h2>Biznisz?</h2>
+				<h2>Be akar lépni a bizniszbe?</h2>
 				<div class="glow">
 					<a href="#">Kapcsolat</a>
 				</div>
