@@ -4,8 +4,8 @@
 <dict>
 	<key>EmbeddedEditorHidden:soda01</key>
 	<false/>
-	<key>ExpandedEditorWidth:soda01:displays([(0, 0), (1280, 800)])</key>
-	<integer>884</integer>
+	<key>ExpandedEditorWidth:soda01:displays([(0, 0), (1280, 800)]:[(1280, 0), (1680, 1050)])</key>
+	<integer>1064</integer>
 	<key>ExpandedItems:soda01</key>
 	<array>
 		<string>3F1DCC12-1FA6-4016-BE51-C79E2349DFAD</string>
@@ -76,7 +76,80 @@
 	<key>FileFilterID:soda01</key>
 	<string>msng</string>
 	<key>OpenDocuments:soda01</key>
-	<array/>
+	<array>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAGaAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			eaQ4SCsAAAJsZqwJc3R5bGUuY3NzAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxm
+			rsmmRkZURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Nz
+			cwAAEAAIAADJeZYoAAAAEQAIAADJpjg2AAAAAQAYAmxmrAJsZloC
+			bGYaAAh8kwAIfIwAAJftAAIARk1hY2ludG9zaCBIRDpVc2VyczoA
+			c29kYTAxOgBTaXRlczoAdHJhdmVsdHJpeC1naXQ6AGxpYjoAY3Nz
+			OgBzdHlsZS5jc3MADgAUAAkAcwB0AHkAbABlAC4AYwBzAHMADwAa
+			AAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgAzVXNlcnMvc29k
+			YTAxL1NpdGVzL3RyYXZlbHRyaXgtZ2l0L2xpYi9jc3Mvc3R5bGUu
+			Y3NzAAATAAEvAAAVAAIADf//AAA=
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/soda01/Sites/traveltrix-git/lib/css/style.css</string>
+			<key>RelativePath</key>
+			<string>./lib/css/style.css</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAGKAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			eaQ4SCsAAAJsZhoJaW5kZXgucGhwAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxm
+			WcmmRONURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAADnRy
+			YXZlbHRyaXgtZ2l0ABAACAAAyXmWKAAAABEACAAAyaY20wAAAAEA
+			EAJsZhoACHyTAAh8jAAAl+0AAgA8TWFjaW50b3NoIEhEOlVzZXJz
+			OgBzb2RhMDE6AFNpdGVzOgB0cmF2ZWx0cml4LWdpdDoAaW5kZXgu
+			cGhwAA4AFAAJAGkAbgBkAGUAeAAuAHAAaABwAA8AGgAMAE0AYQBj
+			AGkAbgB0AG8AcwBoACAASABEABIAK1VzZXJzL3NvZGEwMS9TaXRl
+			cy90cmF2ZWx0cml4LWdpdC9pbmRleC5waHAAABMAAS8AABUAAgAN
+			//8AAA==
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/soda01/Sites/traveltrix-git/index.php</string>
+			<key>RelativePath</key>
+			<string>./index.php</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAGOAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			eaQ4SCsAAAJsZtEHbWFpbi5qcwAAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxm
+			08mmQ/ZURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAAmpz
+			ABAACAAAyXmWKAAAABEACAAAyaY15gAAAAEAGAJsZtECbGZaAmxm
+			GgAIfJMACHyMAACX7QACAENNYWNpbnRvc2ggSEQ6VXNlcnM6AHNv
+			ZGEwMToAU2l0ZXM6AHRyYXZlbHRyaXgtZ2l0OgBsaWI6AGpzOgBt
+			YWluLmpzAAAOABAABwBtAGEAaQBuAC4AagBzAA8AGgAMAE0AYQBj
+			AGkAbgB0AG8AcwBoACAASABEABIAMFVzZXJzL3NvZGEwMS9TaXRl
+			cy90cmF2ZWx0cml4LWdpdC9saWIvanMvbWFpbi5qcwATAAEvAAAV
+			AAIADf//AAA=
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/soda01/Sites/traveltrix-git/lib/js/main.js</string>
+			<key>RelativePath</key>
+			<string>./lib/js/main.js</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
 	<key>OpenDocumentsExpanded</key>
 	<true/>
 	<key>OpenDocumentsVisible</key>
@@ -87,7 +160,35 @@
 	<array>
 		<dict>
 			<key>Date</key>
-			<date>2011-08-31T20:15:41Z</date>
+			<date>2011-09-01T10:29:18Z</date>
+			<key>Location</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAGKAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJeaQ4SCsAAAJsZhoJaW5kZXgucGhwAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAmxmWcmmRONURVhUAAAAAP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAADnRyYXZlbHRyaXgt
+				Z2l0ABAACAAAyXmWKAAAABEACAAAyaY20wAAAAEAEAJs
+				ZhoACHyTAAh8jAAAl+0AAgA8TWFjaW50b3NoIEhEOlVz
+				ZXJzOgBzb2RhMDE6AFNpdGVzOgB0cmF2ZWx0cml4LWdp
+				dDoAaW5kZXgucGhwAA4AFAAJAGkAbgBkAGUAeAAuAHAA
+				aABwAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABE
+				ABIAK1VzZXJzL3NvZGEwMS9TaXRlcy90cmF2ZWx0cml4
+				LWdpdC9pbmRleC5waHAAABMAAS8AABUAAgAN//8AAA==
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/soda01/Sites/traveltrix-git/index.php</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Date</key>
+			<date>2011-09-01T10:27:57Z</date>
 			<key>Location</key>
 			<dict>
 				<key>AliasData</key>
@@ -116,7 +217,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2011-08-31T20:10:57Z</date>
+			<date>2011-09-01T10:09:22Z</date>
 			<key>Location</key>
 			<dict>
 				<key>AliasData</key>
@@ -143,34 +244,6 @@
 				<integer>1</integer>
 			</dict>
 		</dict>
-		<dict>
-			<key>Date</key>
-			<date>2011-08-31T20:09:06Z</date>
-			<key>Location</key>
-			<dict>
-				<key>AliasData</key>
-				<data>
-				AAAAAAGKAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
-				AAAAAADJeaQ4SCsAAAJsZhoJaW5kZXgucGhwAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAmxmWcmmRONURVhUAAAAAP//
-				//8AAAkgAAAAAAAAAAAAAAAAAAAADnRyYXZlbHRyaXgt
-				Z2l0ABAACAAAyXmWKAAAABEACAAAyaY20wAAAAEAEAJs
-				ZhoACHyTAAh8jAAAl+0AAgA8TWFjaW50b3NoIEhEOlVz
-				ZXJzOgBzb2RhMDE6AFNpdGVzOgB0cmF2ZWx0cml4LWdp
-				dDoAaW5kZXgucGhwAA4AFAAJAGkAbgBkAGUAeAAuAHAA
-				aABwAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABE
-				ABIAK1VzZXJzL3NvZGEwMS9TaXRlcy90cmF2ZWx0cml4
-				LWdpdC9pbmRleC5waHAAABMAAS8AABUAAgAN//8AAA==
-				</data>
-				<key>FileURL</key>
-				<string>file://localhost/Users/soda01/Sites/traveltrix-git/index.php</string>
-				<key>TypeID</key>
-				<string>_CFileLocator</string>
-				<key>Version</key>
-				<integer>1</integer>
-			</dict>
-		</dict>
 	</array>
 	<key>RecentItemsExpanded</key>
 	<true/>
@@ -189,8 +262,8 @@
 	<key>ToolbarVisible:soda01</key>
 	<true/>
 	<key>ViewSplitterPosition:soda01</key>
-	<real>0.17690874636173248</real>
-	<key>WindowFrame:soda01:displays([(0, 0), (1280, 800)])</key>
-	<string>rect(44,0,745,1074)</string>
+	<real>0.15151515603065491</real>
+	<key>WindowFrame:soda01:displays([(0, 0), (1280, 800)]:[(1280, 0), (1680, 1050)])</key>
+	<string>rect(45,2,737,1256)</string>
 </dict>
 </plist>

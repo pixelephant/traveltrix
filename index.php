@@ -23,31 +23,37 @@
 	<header>
 		<nav>
 			<ul class="clearfix">
-				<li class="active"><a href="#">Első</a></li>
+				<li><a href="#">Első</a></li>
 				<li><a href="#">Második</a></li>
 				<li><a href="#">Harmadik</a></li>
-				<li id="logo"><img src="img/logo.png" alt="Traveltrix logo" /></li>
 				<li><a href="#">Negyedik</a></li>
 				<li><a href="#">Ötödik</a></li>
 				<li><a href="#">Hatodik</a></li>
 			</ul>
 		</nav>
 	</header>
-	<hgroup>
-		<h1>Traveltrix</h1>
-		<h2>Be far. Feel home.</h2>
-	</hgroup>
-	<section id="promo" class="theme-default">
-		<div id="slider" class="nivoSlider">
-		    <img src="http://placekitten.com/g/940/215" alt="" title="Miauuuu!" />
-		    <img src="http://placekitten.com/940/215" alt="" title="Nyan cat." />
-		    <img src="http://placekitten.com/940/216" alt="" title="Mew mew mew..." />
+	<section id="promo">
+		<div id="promo-left">
+			<img src="img/logo.png" alt="Traveltrix logo" id="logo" />
+			<hgroup>
+				<h1>Traveltrix</h1>
+				<h2>Be far. Feel home.</h2>
+			</hgroup>
+		</div>
+		<div id="promo-right">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+			<div class="glow">
+					<a href="#">Bizniszeink</a>
+					vagy
+					<a href="">rólunk</a>
+			</div>
 		</div>
 	</section>
 	<section id="features">
 		<div class="feature">
 			<h1>Feature 1</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+			<a href="#" class="open-details">+</a>
 		</div>	
 		<div class="feature right">
 			<h1>Feature 2</h1>
@@ -107,7 +113,20 @@
 		<h1>Lorem ipsum dolor sit amet, consectetur?</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
 		<form action="#" id="contactform">
-			
+			<div id="contactform-inner">
+				<fieldset>
+					<h3>Kapcsolat</h3>
+					<div class="r">
+						<input type="text" name="name" id="name" placeholder="Név" />
+					</div>
+					<div class="r">
+						<input type="email" name="email" id="email" placeholder="Email cím" />
+					</div>
+					<textarea name="message" id="message" cols="30" rows="10" placeholder="Üzenet"></textarea>
+				</fieldset>
+				<input type="submit" value="Küldés" />
+			</div>
+			<div id="contactform-bg"></div>
 		</form>
 	</section>
 	<div class="teeth-up"></div>

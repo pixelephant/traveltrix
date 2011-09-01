@@ -232,54 +232,28 @@ html{
 }
 
 header{
-	height: 140px;
+	height: 40px;
 	z-index: 103;
 	position: fixed;
 	width: 100%;
-}
-
-header.full{
-	background-color: #007A31;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#007A31), to(#155E31)); 
-	background-image: -webkit-linear-gradient(top, #007A31, #155E31); 
-	background-image:    -moz-linear-gradient(top, #007A31, #155E31); 
-	background-image:     -ms-linear-gradient(top, #007A31, #155E31); 
-	background-image:      -o-linear-gradient(top, #007A31, #155E31); 
-	background-image:         linear-gradient(top, #007A31, #155E31);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#007A31', EndColorStr='#155E31'); 
-	border-bottom: 1px solid #5A5D54;
-}
-
-header.full nav{
-	background: none;
-	border: none;
+	border-bottom: 1px solid white;
 }
 
 nav{
 	width: 100%;
-	background-color: #007A31;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#007A31), to(#155E31)); 
-	background-image: -webkit-linear-gradient(top, #007A31, #155E31); 
-	background-image:    -moz-linear-gradient(top, #007A31, #155E31); 
-	background-image:     -ms-linear-gradient(top, #007A31, #155E31); 
-	background-image:      -o-linear-gradient(top, #007A31, #155E31); 
-	background-image:         linear-gradient(top, #007A31, #155E31);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#007A31', EndColorStr='#155E31'); 
-	border-bottom: 1px solid #5A5D54;
-	height: 59px;
-	margin: 30px 0;
+	height: 40px;
+	background-color: #29ABE2;
 }
 
 nav ul{
 	width: 840px;
 	margin: 0 auto;
-	padding: 0 50px;
 }
 
 nav ul li{
 	float: left;
-	width: 120px;
-	line-height: 59px;
+	width: 140px;
+	line-height: 40px;
 	text-align: center;
 }
 
@@ -312,22 +286,37 @@ nav ul li.active a{
 nav ul li a{
 	display: block;
 	font-family: AllerBold;
-	color: #DAEDB3 !important;
+	color: white !important;
 	font-size: 16px;
 	text-decoration: none;
 	letter-spacing: 1px;
 }
 
-#logo img{
-	position: relative;
-	top: -23px;
+#promo{
+	padding-bottom: 0 !important;
+	padding-top: 60px;
+	overflow:hidden;
+}
+
+#promo-left{
+	width:470px;
+	overflow: hidden;
+	float:left;
+}
+
+#promo-right{
+	width:470px;
+	float:left;
+}
+
+#logo{
+	float:left;
 }
 
 hgroup{
-	padding-top: 140px;
-	text-align: center;
-	width: 940px;
+	text-align: left;
 	margin: 0 auto;
+	float:left;
 }
 
 hgroup h1,h2{
@@ -350,11 +339,7 @@ hgroup h2{
 section{
 	width: 940px;
 	margin: 0 auto;
-	padding: 40px 0;
-}
-
-#promo{
-	padding-bottom: 0 !important;
+	padding: 45px 0;
 }
 
 #slider{
@@ -435,6 +420,19 @@ section{
 	background: #24261F;
 }
 
+a.open-details{
+	margin: 0 !important;
+	width: 30px !important;
+	height:30px !important;
+	line-height:30px !important;
+	float:right !important;
+	background: none !important;
+}
+
+.feature:hover a.open-details{
+	background:#77d42a !important;
+}
+
 .sectionwrap{
 	width: 100%;
 }
@@ -485,7 +483,7 @@ section{
 
 #ctawrap{
 	background: #59AE4B;
-	height: 180px;
+	height: 200px;
 }
 
 #cta{
@@ -589,7 +587,77 @@ section{
 	height: 570px;
 	width: 920px;
 	margin: 25px auto;
-	background: url(../../img/letterborder.png) repeat-x top white;
+	background: url(../../img/letterborder.png) repeat-x white top;
+	position: relative;
+	z-index: 2;	
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-radius: 3px;       
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+}
+
+#contactform-inner{
+	height: 530px;
+	width: 890px;
+	background: url(../../img/stamp.png) no-repeat 675px 20px;
+	padding:15px
+}
+
+#contactform-bg{
+	height: 10px;
+	width: 920px;
+	background: url(../../img/letterborder.png) repeat-x bottom;
+	position:absolute;
+	bottom:0;
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-radius: 3px;       
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+}
+
+#contactform h3{
+	font-family:AllerBold;
+	font-size:30px;
+	color:#5A5D54;
+	margin-top: 70px;
+}
+
+#contactform input[type="email"],#contactform input[type="text"],#contactform textarea{
+	border: 1px solid #ADAEAA;
+	width:440px;
+	height:40px;
+	font-size:16px;
+	margin-bottom: 25px;
+}
+
+#contactform textarea{
+	height: 165px;
+	padding: 5px;
+}
+
+#contactform input[type="email"]:focus,#contactform input[type="text"]:focus,#contactform textarea:focus{
+	border-color:#5A5D54;
+}
+
+#contactform input[type="submit"]{
+	width:140px;
+	height:40px;
+	background: none;
+	border: 1px solid #ADAEAA;
+	color:#A9A9A9;
+	font-size: 16px;
+	padding:0;
+	background: white;
+}
+
+#contactform input[type="submit"]:hover{
+	border-color:#007A31;
+	color:#007A31;
+}
+
+#contactform input[type="submit"]:active{
+	background:#007A31;
+	color:white;
 }
 
 footer{
@@ -604,7 +672,7 @@ footer{
 	
 }
 
-#footer a{
+#footer a,a.open-details{
 	margin: 0 5px;
 	color: white;
 	text-decoration: none;
