@@ -223,9 +223,50 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author: 
+   Author: Pixelphant media
    ========================================================================== */
 
+.green-button{
+	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+	background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+	background-color:#77d42a;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #268a16;
+	display:inline-block;
+	color:#306108 !important;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #aade7c;
+}
+
+.green-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+	background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+	background-color:#5cb811;
+}
+
+.green-button:active {
+	position:relative;
+	top:1px;
+}
+
+.glow{
+	padding:10px;
+	-webkit-border-radius: 6px; 
+	-moz-border-radius: 6px; 
+	border-radius: 6px; 	
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+	background-color: transparent;
+	background-color: rgba(255, 255, 255, 0.6);  
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF,endColorstr=#99FFFFFF); 
+	zoom: 1;
+}
 
 html{
 	background: #303328;
@@ -286,8 +327,7 @@ nav ul li a{
 }
 
 #promo{
-	padding-bottom: 0 !important;
-	padding-top: 60px;
+	padding: 60px 0 45px 0;
 	overflow:hidden;
 	border-bottom: 2px dashed #50534C;
 }
@@ -309,24 +349,25 @@ nav ul li a{
 	color:white;
 	font-weight: 500;
 	font-size: 18px;
-	margin-top: 60px;
+	margin:60px 0 15px 0;
 }
 
 #promo-right .glow{
-	background: #565A4D;
-	width: 200px;
-	text-align: center;
 	float: left;
-	margin-right: 30px;
+}
+
+#promo-right .green-button{
+	padding:10px;
+	font-size:24px;
+	font-weight: bold;
 }
 
 #promo-right span{
 	float:left;
 	color:white;
-	font-family: "Myriad Pro",Arial;
 	font-style: italic;
 	font-size: 16px;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 #promo-right span a{
@@ -520,50 +561,15 @@ a.open-details{
 	text-align: center;
 }
 
-.glow{
-	width: 180px;
-	height: 60px;
-	-webkit-border-radius: 6px; 
-	-moz-border-radius: 6px; 
-	border-radius: 6px; 	
-	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
-	background: #70BA71;
+#cta .glow{
 	margin: 30px auto;
+	display: inline-block;
 }
 
-.glow a{
-	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
-	box-shadow:inset 0px 1px 0px 0px #caefab;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
-	background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
-	background-color:#77d42a;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #268a16;
-	display:inline-block;
-	color:#306108;
-	font-family:arial;
+#cta .green-button{
 	font-size:23px;
 	font-weight:bold;
 	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:1px 1px 0px #aade7c;
-	margin-top:10px;
-}
-
-.glow a:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
-	background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
-	background-color:#5cb811;
-}
-
-.glow a:active {
-	position:relative;
-	top:1px;
 }
 
 .teeth-up{

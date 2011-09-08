@@ -37,24 +37,23 @@
 			</hgroup>
 		</div>
 		<div id="promo-right">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+			<p>The easiest way to launch and market your own touristic enterprise. And it’s free! You bring expertise and Traveltrix provides all you need to share your knowledge with the World and earn money with it!</p>
 			<div class="glow">
-					<a href="#">Bizniszeink</a>
+					<a class="green-button" href="#">Launch my enterprise</a>
 			</div>
 			<span>
-				vagy
-				<a href="">Olvasson rólunk</a>
+				<a href="">More info</a>
 			</span>
 		</div>
 	</section>
 	<section id="features">
 		<div class="feature">
-			<h1>Feature 1</h1>
+			<h1>Health &amp; Wellness tourism</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
 			<a href="#" class="open-details">+</a>
 		</div>	
 		<div class="feature right">
-			<h1>Feature 2</h1>
+			<h1>Extreme tourism</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
 			<a href="#" class="open-details">+</a>
 		</div>
@@ -64,12 +63,12 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
 		</div>	
 		<div class="feature">
-			<h1>Feature 3</h1>
+			<h1>Local sightseeing tours</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
 			<a href="#" class="open-details">+</a>
 		</div>	
 		<div class="feature right">
-			<h1>Feature 4</h1>
+			<h1>Welcome package</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
 			<a href="#" class="open-details">+</a>
 		</div>
@@ -103,29 +102,29 @@
 	</div>
 	<div class="sectionwrap" id="ctawrap">
 		<section id="cta">
-				<h2>Be akar lépni a bizniszbe?</h2>
+				<h2>Interested, but need more information?</h2>
 				<div class="glow">
-					<a href="#">Kapcsolat</a>
+					<a class="green-button" href="#">Send us an email</a>
 				</div>
 		</section>
 	</div>
 	<div class="teeth-down"></div>
 	<section id="contact">
-		<h1>Lorem ipsum dolor sit amet, consectetur?</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
+		<h1>We'd love to hear from you!</h1>
+		<p>Our team is eager to shake up the travelling culture, so we are glad to read and answer any ideas, questions, comments, etc. Please, fill out the form below – name, e-mail address and your message. We answer as soon as possible. (Don’t be afraid! Your personal datas are in safe. We have zero-spam policy!)</p>
 		<form action="#" id="contactform">
 			<div id="contactform-inner">
 				<fieldset>
 					<h3>Kapcsolat</h3>
 					<div class="r">
-						<input type="text" name="name" id="name" placeholder="Név" />
+						<input type="text" name="name" id="name" placeholder="Name" />
 					</div>
 					<div class="r">
-						<input type="email" name="email" id="email" placeholder="Email cím" />
+						<input type="email" name="email" id="email" placeholder="Email address" />
 					</div>
-					<textarea name="message" id="message" cols="30" rows="10" placeholder="Üzenet"></textarea>
+					<textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
 				</fieldset>
-				<input type="submit" value="Küldés" />
+				<input type="submit" value="Send" />
 			</div>
 			<div id="contactform-bg"></div>
 		</form>
