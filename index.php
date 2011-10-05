@@ -25,8 +25,8 @@
 		<nav>
 			<ul class="clearfix">
 				<li><a href="#hello">Hello</a></li>
+				<li><a href="#features">Our Projects</a></li>
 				<li><a href="#about">About us</a></li>	
-				<li><a href="#features">Features</a></li>
 				<li><a href="#quotes">Quotes</a></li>
 				<li><a href="#cta">Contact</a></li>
 				<div id="social">
