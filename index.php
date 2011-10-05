@@ -56,16 +56,23 @@
 			</div>
 		</div>
 	</section>
+	<div class="hr"></div>
 	<section id="features">
 		<div class="feature">
-			<h1>Health &amp; Wellness tourism</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
-			<a href="#" class="open-details">+</a>
+			<div class="img"></div>
+			<div class="txt">
+				<h1>Health &amp; Wellness tourism</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+				<a href="#" class="open-details">More info</a>
+			</div>
 		</div>	
 		<div class="feature right">
-			<h1>Extreme tourism</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
-			<a href="#" class="open-details">+</a>
+			<div class="img"></div>
+			<div class="txt">
+				<h1>Extreme tourism</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+				<a href="#" class="open-details">More info</a>
+			</div>
 		</div>
 		<div class="detail">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
@@ -73,14 +80,18 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
 		</div>	
 		<div class="feature">
-			<h1>Local sightseeing tours</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
-			<a href="#" class="open-details">+</a>
+			<div class="img"></div>
+			<div class="txt">
+				<h1>Local sightseeing tours</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+				<a href="#" class="open-details">More info</a>
+			</div>
 		</div>	
 		<div class="feature right">
+			<div class="img"></div>
 			<h1>Welcome package</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
-			<a href="#" class="open-details">+</a>
+			<a href="#" class="open-details">More info</a>
 		</div>
 		<div class="detail">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
@@ -88,23 +99,44 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
 		</div>		
 	</section>
+	<div class="hr"></div>
+	<section id="about">
+		<div class="aboutus">
+			<h1>About Us</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
+		</div>
+		<div class="hr m"></div>
+		<div class="about" id="akos">
+			<h2>Ákos Fodor</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor.</p>
+		</div>
+		<div class="hr m"></div>
+		<div class="about" id="sandor">
+			<h2>Sándor R. Kiss</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor.</p>
+		</div>
+	</section>
+	<div class="shadow-top"></div>
 	<div class="sectionwrap" id="quoteswrap">
 		<section id="quotes">
 			<div class="quote">
 				<div class="img">
-					<img src="img/avatar.png" alt="avatar" />
+					<img src="img/person.png" alt="avatar" />
 				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
 			</div>	
 			<div class="quote">
 				<div class="img">
-					<img src="img/avatar.png" alt="avatar" />					
+					<img src="img/person.png" alt="avatar" />					
 				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
 			</div>
 			<div class="quote">
 				<div class="img">
-					<img src="img/avatar.png" alt="avatar" />					
+					<img src="img/person.png" alt="avatar" />					
 				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
 			</div>	
@@ -118,35 +150,31 @@
 				</div>
 		</section>
 	</div>
-	<div class="teeth-down"></div>
-	<section id="contact">
-		<h1>We'd love to hear from you!</h1>
-		<p>Our team is eager to shake up the travelling culture, so we are glad to read and answer any ideas, questions, comments, etc. Please, fill out the form below – name, e-mail address and your message. We answer as soon as possible. (Don’t be afraid! Your personal datas are in safe. We have zero-spam policy!)</p>
-		<form action="#" id="contactform">
-			<div id="contactform-inner">
-				<fieldset>
-					<h3>Kapcsolat</h3>
-					<div class="r">
-						<input type="text" name="name" id="name" placeholder="Name" />
-					</div>
-					<div class="r">
-						<input type="email" name="email" id="email" placeholder="Email address" />
-					</div>
-					<textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-				</fieldset>
-				<input type="submit" value="Send" />
-			</div>
-			<div id="contactform-bg"></div>
-		</form>
-	</section>
-	<div class="teeth-up"></div>
-	<footer>
-		<section id="footer">
-			<a href="http://twitter.com/">t</a>
-			<a href="http://facebook.com/">f</a>
-			<a href="http://plus.google.com">+</a>
+	<div id="contactwrap" class="contactwrap">
+		<div class="shadow-bottom"></div>
+		<section id="contact">
+			<h1>We'd love to hear from you!</h1>
+			<p>Our team is eager to shake up the travelling culture, so we are glad to read and answer any ideas, questions, comments, etc. Please, fill out the form below – name, e-mail address and your message. We answer as soon as possible. (Don’t be afraid! Your personal datas are in safe. We have zero-spam policy!)</p>
+			<form action="#" id="contactform">
+				<div id="contactform-inner">
+					<fieldset>
+						<h3>Contact</h3>
+						<div class="r">
+							<input type="text" name="name" id="name" placeholder="Name" />
+						</div>
+						<div class="r">
+							<input type="email" name="email" id="email" placeholder="Email address" />
+						</div>
+						<textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+					</fieldset>
+					<input type="submit" value="Send" />
+				</div>
+				<div id="contactform-bg"></div>
+			</form>
 		</section>
-	</footer>
+		<div class="shadow-top"></div>
+	</div>
+	<footer>&copy; 2011</footer>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
 		</script>
 		<script>
