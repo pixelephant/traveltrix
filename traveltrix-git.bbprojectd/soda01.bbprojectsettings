@@ -104,30 +104,6 @@
 		<dict>
 			<key>AliasData</key>
 			<data>
-			AAAAAAGaAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			eaQ4SCsAAAJsZqwJc3R5bGUuY3NzAAAAAAAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxm
-			rsmmRkZURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Nz
-			cwAAEAAIAADJeZYoAAAAEQAIAADJpjg2AAAAAQAYAmxmrAJsZloC
-			bGYaAAh8kwAIfIwAAJftAAIARk1hY2ludG9zaCBIRDpVc2VyczoA
-			c29kYTAxOgBTaXRlczoAdHJhdmVsdHJpeC1naXQ6AGxpYjoAY3Nz
-			OgBzdHlsZS5jc3MADgAUAAkAcwB0AHkAbABlAC4AYwBzAHMADwAa
-			AAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgAzVXNlcnMvc29k
-			YTAxL1NpdGVzL3RyYXZlbHRyaXgtZ2l0L2xpYi9jc3Mvc3R5bGUu
-			Y3NzAAATAAEvAAAVAAIADf//AAA=
-			</data>
-			<key>FileURL</key>
-			<string>file://localhost/Users/soda01/Sites/traveltrix-git/lib/css/style.css</string>
-			<key>RelativePath</key>
-			<string>./lib/css/style.css</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>AliasData</key>
-			<data>
 			AAAAAAGOAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
 			eaQ4SCsAAAJsZtEHbWFpbi5qcwAAAAAAAAAAAAAAAAAAAAAAAAAA
 			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxm
@@ -149,6 +125,30 @@
 			<key>Version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAGaAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			eaQ4SCsAAAJsZqwJc3R5bGUuY3NzAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxm
+			rsmmRkZURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Nz
+			cwAAEAAIAADJeZYoAAAAEQAIAADJpjg2AAAAAQAYAmxmrAJsZloC
+			bGYaAAh8kwAIfIwAAJftAAIARk1hY2ludG9zaCBIRDpVc2VyczoA
+			c29kYTAxOgBTaXRlczoAdHJhdmVsdHJpeC1naXQ6AGxpYjoAY3Nz
+			OgBzdHlsZS5jc3MADgAUAAkAcwB0AHkAbABlAC4AYwBzAHMADwAa
+			AAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgAzVXNlcnMvc29k
+			YTAxL1NpdGVzL3RyYXZlbHRyaXgtZ2l0L2xpYi9jc3Mvc3R5bGUu
+			Y3NzAAATAAEvAAAVAAIADf//AAA=
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/soda01/Sites/traveltrix-git/lib/css/style.css</string>
+			<key>RelativePath</key>
+			<string>./lib/css/style.css</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>OpenDocumentsExpanded</key>
 	<true/>
@@ -160,7 +160,35 @@
 	<array>
 		<dict>
 			<key>Date</key>
-			<date>2011-09-08T14:40:05Z</date>
+			<date>2011-09-08T19:43:10Z</date>
+			<key>Location</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAGKAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJeaQ4SCsAAAJsZhoJaW5kZXgucGhwAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAmxmWcmmRONURVhUAAAAAP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAADnRyYXZlbHRyaXgt
+				Z2l0ABAACAAAyXmWKAAAABEACAAAyaY20wAAAAEAEAJs
+				ZhoACHyTAAh8jAAAl+0AAgA8TWFjaW50b3NoIEhEOlVz
+				ZXJzOgBzb2RhMDE6AFNpdGVzOgB0cmF2ZWx0cml4LWdp
+				dDoAaW5kZXgucGhwAA4AFAAJAGkAbgBkAGUAeAAuAHAA
+				aABwAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABE
+				ABIAK1VzZXJzL3NvZGEwMS9TaXRlcy90cmF2ZWx0cml4
+				LWdpdC9pbmRleC5waHAAABMAAS8AABUAAgAN//8AAA==
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/soda01/Sites/traveltrix-git/index.php</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Date</key>
+			<date>2011-09-08T19:43:10Z</date>
 			<key>Location</key>
 			<dict>
 				<key>AliasData</key>
@@ -189,35 +217,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2011-09-08T14:40:05Z</date>
-			<key>Location</key>
-			<dict>
-				<key>AliasData</key>
-				<data>
-				AAAAAAGKAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
-				AAAAAADJeaQ4SCsAAAJsZhoJaW5kZXgucGhwAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAmxmWcmmRONURVhUAAAAAP//
-				//8AAAkgAAAAAAAAAAAAAAAAAAAADnRyYXZlbHRyaXgt
-				Z2l0ABAACAAAyXmWKAAAABEACAAAyaY20wAAAAEAEAJs
-				ZhoACHyTAAh8jAAAl+0AAgA8TWFjaW50b3NoIEhEOlVz
-				ZXJzOgBzb2RhMDE6AFNpdGVzOgB0cmF2ZWx0cml4LWdp
-				dDoAaW5kZXgucGhwAA4AFAAJAGkAbgBkAGUAeAAuAHAA
-				aABwAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABE
-				ABIAK1VzZXJzL3NvZGEwMS9TaXRlcy90cmF2ZWx0cml4
-				LWdpdC9pbmRleC5waHAAABMAAS8AABUAAgAN//8AAA==
-				</data>
-				<key>FileURL</key>
-				<string>file://localhost/Users/soda01/Sites/traveltrix-git/index.php</string>
-				<key>TypeID</key>
-				<string>_CFileLocator</string>
-				<key>Version</key>
-				<integer>1</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>Date</key>
-			<date>2011-09-08T14:40:05Z</date>
+			<date>2011-09-08T19:43:08Z</date>
 			<key>Location</key>
 			<dict>
 				<key>AliasData</key>

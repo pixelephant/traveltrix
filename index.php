@@ -17,33 +17,43 @@
 		<link rel="stylesheet" href="lib/css/style.css" />
 		
 		<script src="lib/js/modernizr-2.min.js"></script>
+		<script type="text/javascript" src="http://use.typekit.com/ysi5amo.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
-	<body>
+	<body id="hello">
 	<header>
 		<nav>
 			<ul class="clearfix">
+				<li><a href="#hello">Hello</a></li>
+				<li><a href="#about">About us</a></li>	
 				<li><a href="#features">Features</a></li>
 				<li><a href="#quotes">Quotes</a></li>
-				<li><a href="#cta">Cta</a></li>
+				<li><a href="#cta">Contact</a></li>
+				<div id="social">
+					<li><a id="twitter" href="http://www.twitter.com"></a></li>
+					<li><a id="facebook" href="http://www.facebook.com"></a></li>
+				</div>
 			</ul>
 		</nav>
 	</header>
 	<section id="promo">
 		<div id="promo-left">
 			<img src="img/logo.png" alt="Traveltrix logo" id="logo" />
-			<hgroup>
-				<h1>Traveltrix</h1>
-				<h2>Be far. Feel home.</h2>
-			</hgroup>
 		</div>
 		<div id="promo-right">
 			<p>The easiest way to launch and market your own touristic enterprise. And it’s free! You bring expertise and Traveltrix provides all you need to share your knowledge with the World and earn money with it!</p>
+			<div id="newsletter">
+				<form action="#">
+					<label for="newsletter-email">Keep me informed about Traveltrix</label>
+					<div class="glow">
+						<input type="text" name="newsletter-email" id="newsletter-email" placeholder="Email address" />
+						<input type="submit" value="Ok" />						
+					</div>
+				</form>
+			</div>
 			<div class="glow">
 					<a class="green-button" href="#">Launch my enterprise</a>
 			</div>
-			<span>
-				<a href="">More info</a>
-			</span>
 		</div>
 	</section>
 	<section id="features">

@@ -93,18 +93,6 @@ sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: b
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
-@font-face {
-    font-family: 'AllerBold';
-    src: url('../fonts/aller_bd-webfont.eot');
-    src: url('../fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/aller_bd-webfont.woff') format('woff'),
-         url('../fonts/aller_bd-webfont.ttf') format('truetype'),
-         url('../fonts/aller_bd-webfont.svg#AllerBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 p{
 	font-family: "Myriad Pro",Arial,sans;
 }
@@ -257,19 +245,19 @@ td { vertical-align: top; }
 }
 
 .glow{
-	padding:10px;
+	padding:6px;
 	-webkit-border-radius: 6px; 
 	-moz-border-radius: 6px; 
 	border-radius: 6px; 	
 	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
 	background-color: transparent;
-	background-color: rgba(255, 255, 255, 0.6);  
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF,endColorstr=#99FFFFFF); 
+	background-color: rgba(237, 244, 217, 0.2);  
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33EDF4D9,endColorstr=#33EDF4D9); 
 	zoom: 1;
 }
 
 html{
-	background: #303328;
+	background:url(../../img/bg_pattern.png) repeat #303328;
 }
 
 header{
@@ -277,53 +265,74 @@ header{
 	z-index: 103;
 	position: fixed;
 	width: 100%;
-	border-bottom: 1px solid white;
 }
 
 nav{
 	width: 100%;
-	height: 40px;
-	background-color: #29ABE2;
+	height: 72px;
+	background: url(../../img/menu_bg.png) repeat-x;
 }
 
 nav ul{
-	width: 840px;
+	width: 980px;
 	margin: 0 auto;
+	background: url(../../img/clouds.png) no-repeat;
 }
 
 nav ul li{
 	float: left;
-	width: 140px;
-	line-height: 40px;
+	line-height: 42px;
 	text-align: center;
-}
-
-nav ul li:hover{	
-	background-color: transparent;
-	background-color: rgba(0, 0, 0, 0.2);  
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000); 
-	zoom: 1;
-}
-
-nav ul #logo:hover{
-	background: none;
-}
-
-nav ul li.active{	
-	
-}
-
-nav ul li.active a{
-	color:black !important;
+	margin:0 20px;
 }
 
 nav ul li a{
 	display: block;
-	font-family: AllerBold;
-	color: white !important;
+	color: #A9DDF3 !important;
 	font-size: 16px;
 	text-decoration: none;
-	letter-spacing: 1px;
+	font-family:museo-sans;
+	font-style:italic;
+	-webkit-transition: color 0.4s ease-out;  
+    -moz-transition: color 0.4s ease-out;  
+    -ms-transition: color 0.4s ease-out;  
+    -o-transition: color 0.4s ease-out;  
+    transition: color 0.4s ease-out; 
+}
+
+nav ul li a:hover,nav ul li.active a{
+	color:white !important;
+}
+
+#social{
+	float:right;
+}
+
+#social li{
+	margin:6px 5px;
+}
+
+#social li a{
+	width:30px;
+	height:30px;
+	opacity:0.8;
+	-webkit-transition: opacity 0.4s ease-out;  
+    -moz-transition: opacity 0.4s ease-out;  
+    -ms-transition: opacity 0.4s ease-out;  
+    -o-transition: opacity 0.4s ease-out;  
+    transition: opacity 0.4s ease-out;
+}
+
+#social li a:hover{
+	opacity:1;
+}
+
+#twitter{
+	background:url(../../img/twitter.png) no-repeat;
+}
+
+#facebook{
+	background:url(../../img/facebook.png) no-repeat;
 }
 
 #promo{
@@ -342,6 +351,7 @@ nav ul li a{
 	width:470px;
 	float:left;
 	padding-bottom: 20px;
+	overflow:hidden;
 }
 
 #promo-right p{
@@ -357,23 +367,42 @@ nav ul li a{
 }
 
 #promo-right .green-button{
-	padding:10px;
-	font-size:24px;
+	padding:8px;
+	font-size:18px;
 	font-weight: bold;
 }
 
-#promo-right span{
+#newsletter{
 	float:left;
-	color:white;
-	font-style: italic;
-	font-size: 16px;
-	margin-top: 30px;
+	width:250px;
 }
 
-#promo-right span a{
-	color:#29ABE2;
-	font-size: 17px;
-	margin-left: 25px;
+#newsletter label{
+	font-size:14px;
+	color:#27AAE1;
+	display:block;
+	margin-bottom:4px;
+	font-family:museo-sans;
+}
+
+#newsletter-email{
+	background:none;
+	border:none;
+	font-size:14px;
+	color:white;
+	width:175px;
+	font-family:museo-sans;
+}
+
+#newsletter input[type="submit"]{
+	background:#27AAE1;
+	color:white;
+	border:none;
+	-webkit-border-radius: 6px; 
+	-moz-border-radius: 6px; 
+	border-radius: 6px; 	
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+	font-family:museo-sans;
 }
 
 #logo{
