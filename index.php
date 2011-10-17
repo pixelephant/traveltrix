@@ -61,7 +61,7 @@
 		<div class="feature">
 			<div class="img"></div>
 			<div class="txt">
-				<h1>Health &amp; Wellness tourism</h1>
+				<h1>Local sightseeing tours</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
 				<a href="#" class="open-details">More info</a>
 			</div>
@@ -69,7 +69,7 @@
 		<div class="feature right">
 			<div class="img"></div>
 			<div class="txt">
-				<h1>Extreme tourism</h1>
+				<h1>Health &amp; Wellness tourism</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
 				<a href="#" class="open-details">More info</a>
 			</div>
@@ -82,14 +82,14 @@
 		<div class="feature">
 			<div class="img"></div>
 			<div class="txt">
-				<h1>Local sightseeing tours</h1>
+				<h1>Extreme tourism</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
 				<a href="#" class="open-details">More info</a>
 			</div>
 		</div>	
 		<div class="feature right">
 			<div class="img"></div>
-			<h1>Welcome package</h1>
+			<h1>Join our team!</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
 			<a href="#" class="open-details">More info</a>
 		</div>
@@ -103,20 +103,41 @@
 	<section id="about">
 		<div class="aboutus">
 			<h1>About Us</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
+			<p><b>Traveltrix. Be far. Feel home!</b></p>
+			<p>Have you ever felt uneasy, bored, unoriented or simply lost somewhere around the World? Or have you ever returned to home after a pretty costly holiday without being fully inspired by local experience, people and with an embarrassing feeling ’Gosh! What on earth did I do over there? I didn’t exploit all the opportunities, I could. However, I spent a lot of money on accommodation and flight.’ That’s a pity!</p> 
+			<p>Traveltrix is a solution for all these.</p> 
+			<p>We believe in locals, as…</p>
+			<ol>
+				<li>Noone knows resorts, cities and their secret beauties better, than they do.</li>
+				<li>Locals love showing travellers the real side of their living place and life, however…</li>
+				<li>Real, authentic insiders are hiding and they lack the interface to reach travellers.</li>
+			</ol>
+			<p>We believe in self-organising travelling culture as an alternative of mass-tourism, as…</p>
+			<ol>
+				<li>Only proactive self-organising travellers have the opportunity to visit the real local secrets, instead visiting only the general, mainstream touristic sights.</li> 
+				<li>Self-organising lets you perfectly customize your holiday in order to make it fit to your dreams, your pace, your personality.</li> 
+				<li>Active refreshing is far better, than passive one and it may come true only if you do not let the mass-tourists to restrain you, schedule your holiday and make you adapt to them!</li>
+				<li>Self-organising is often far cheaper, than hiring a travel agent!</li>
+			</ol>
+			<p>There is no such a suitable interface, where local experts and self-organising travellers can meet each other and match their wishes.</p> 
+			<p>Traveltrix is a start-up company, which recently launched after winning the third price in general on a renowned start-up competition and the first place in online and mobile application category.</p>
+			<p>Traveltrix helps local experts in tourism to share all the secrets with travellers and it provides an interface for self-organising travellers to be proactive and organise their own holiday according to their real dreams.</p>
+			<p>Basically two sorts of touristic companies exist. One, which runs internationally without any local representatives, and the other one, which is purely local. None of them are good enough. Either, they do not care about the real wishes and focus on mass-customization or they have no real effect on customer habits and travelling culture.</p> 
+			<p>Traveltrix.org combines both - internationality and locality in order to evangelize the self-organising travelling culture and help locals to meet proactive international travellers from all around the world.</p> 
+			<p>That’s, what we believe in and fight for it! Let’s shake up tourism and make it more personal in order to help travellers to be far and feel home, no matter, where they travel to.</p> 
+			<p>Traveltrix. Be far. Feel home.</p>
 		</div>
 		<div class="hr m"></div>
 		<div class="about" id="akos">
 			<h2>Ákos Fodor</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor.</p>
+			<p>“I will never forget my best pal’s words: ‘Hungary is not sooo bad country’. I understand, but I feel sorry for the depression and the irony, that characterize a few Hungarians. They must be blind for beauty. Budapest and Hungary are simply wonderful. I wake up and go to sleep here everyday, but I never miss a day to see the River Danube, to sit down at its bank to eat a sandwich or to sip a beer. I simply love living here and being a Hungarian.</p>
+			<p> I am an economist, but half-time professional tour-guide, too and I was always glad to stroll along the secret beauties with curious travellers. I consider myself a local expert and I know, so many others are hiding all around the World. Where are you? I hope, you’re out there. Traveltrix is a vision of mine. Traveltrix will be an international place for local heroes, ready to provide something extraordinary and for proactive travellers, who cannot be satisfied by mass-customized, general scenes. Traveltrix matches them and helps to be far and feel home!”</p>
 		</div>
 		<div class="hr m"></div>
 		<div class="about" id="sandor">
 			<h2>Sándor R. Kiss</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor.</p>
+			<p>“I was already 16 years old, when I got the first chance to leave my home country, Hungary, as a tourist. I organized the whole trip by myself. By the time I’ve realized, that if you are at a completely new place, you never have enough time and you lack the real orientation, how to explore the local secrets, and at the end of the day, you missed and passed a lot of secret highlights and left the visited place without real experiences.</p>
+			<p>I believe that Traveltrix spares time for the travellers and provides value-added offers. I dedicate my job to understand people’s needs as tourists, and create them simple, informative, experience-focused solutions, wherever they travel on the Earth.”</p>
 		</div>
 	</section>
 	<div class="shadow-top"></div>
