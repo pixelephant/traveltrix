@@ -176,7 +176,7 @@
 		<section id="contact">
 			<h1>We'd love to hear from you!</h1>
 			<p>Our team is eager to shake up the travelling culture, so we are glad to read and answer any ideas, questions, comments, etc. Please, fill out the form below – name, e-mail address and your message. We answer as soon as possible. (Don’t be afraid! Your personal datas are in safe. We have zero-spam policy!)</p>
-			<form action="#" id="contactform">
+			<form method="post" action="#" id="contactform">
 				<div id="contactform-inner">
 					<fieldset>
 						<h3>Contact</h3>
