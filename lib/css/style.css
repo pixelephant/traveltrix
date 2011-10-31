@@ -387,10 +387,11 @@ nav ul li a:hover,nav ul li.active a{
 
 #promo-right .glow{
 	float: left;
+	margin-bottom:3px.;
 }
 
 #promo-right .green-button{
-	padding:8px;
+	padding:7px;
 	font-size:18px;
 	font-weight: bold;
 }
@@ -525,6 +526,19 @@ section{
 	clear: both;
 }
 
+.detail h3{
+	font-size:16px;
+	color: #29ABE2;
+}
+
+.detail p{
+	line-height:1.5;
+}
+
+.detail a,.detail p strong{
+	color:#29ABE2;
+}
+
 .detail.open{
 	border: 2px dashed #50534C;
 	border-top: none;
@@ -565,7 +579,6 @@ a.open-details{
 
 #about p{
 	line-height:1.5;
-	text-indent:10px;
 }
 
 .about{
@@ -574,6 +587,7 @@ a.open-details{
 
 .about h2{
 	color:#55AB48;
+	padding-left:20px;
 }
 
 #akos{
@@ -586,6 +600,10 @@ a.open-details{
 
 .about{
 	overflow:hidden;
+}
+
+ol li{
+	padding:3px 0;
 }
 
 .about p{
@@ -627,6 +645,13 @@ a.open-details{
 	float: left;
 	width: 190px;
 	padding: 0 15px;
+}
+
+.quote strong{
+	display:block;
+	font-style:italic;
+	font-weight:normal;
+	margin-top:3px;
 }
 
 #ctawrap{
@@ -730,6 +755,7 @@ a.open-details{
 #contactform textarea{
 	height: 165px;
 	padding: 5px;
+	width:432px;
 }
 
 #contactform input[type="email"]:focus,#contactform input[type="text"]:focus,#contactform textarea:focus{
@@ -755,6 +781,33 @@ a.open-details{
 #contactform input[type="submit"]:active{
 	background:#007A31;
 	color:white;
+}
+
+#contactform label.error{
+	color:red;
+	font-size:14px;
+	padding:0 10px;
+}
+
+#newsletterform label.error{
+	color:red;
+	padding:5px;
+	font-size:12px;
+}
+
+#newsletterform .resp{
+	color:#55AB48;
+	padding:5px;
+}
+
+#contactform .resp{
+	padding: 0 10px;
+	color:#55AB48;
+	font-size:16px;
+}
+
+#contactform .resp.error,#contactform .resp.error{
+	color:red !important;
 }
 
 footer{

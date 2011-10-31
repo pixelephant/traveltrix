@@ -24,10 +24,10 @@
 	<header>
 		<nav>
 			<ul class="clearfix">
-				<li><a href="#hello">Hello</a></li>
+				<li class="active"><a href="#hello">Hello</a></li>
 				<li><a href="#features">Our Projects</a></li>
 				<li><a href="#about">About us</a></li>	
-				<li><a href="#quotes">Quotes</a></li>
+<!--				<li><a href="#quotes">Quotes</a></li> -->
 				<li><a href="#cta">Contact</a></li>
 				<div id="social">
 					<li><a id="twitter" href="http://www.twitter.com"></a></li>
@@ -43,72 +43,96 @@
 		<div id="promo-right">
 			<p>The easiest way to launch and market your own touristic enterprise. And it’s free! You bring expertise and Traveltrix provides all you need to share your knowledge with the World and earn money with it!</p>
 			<div id="newsletter">
-				<form action="#">
+				<form action="#" id="newsletterform">
 					<label for="newsletter-email">Keep me informed about Traveltrix</label>
 					<div class="glow">
 						<input type="text" name="newsletter-email" id="newsletter-email" placeholder="Email address" />
-						<input type="submit" value="Ok" />						
+						<input type="submit" value="Ok" />
 					</div>
+					<span class="resp"></span>
 				</form>
 			</div>
 			<div class="glow">
-					<a class="green-button" href="#">Launch my enterprise</a>
+					<a id="launch" class="green-button" href="#">Launch my enterprise</a>
 			</div>
 		</div>
 	</section>
 	<div class="hr"></div>
 	<section id="features">
-		<div class="feature">
+		<div id="sightseeing" class="feature">
 			<div class="img"></div>
 			<div class="txt">
 				<h1>Local sightseeing tours</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+				<p>Our sightseeing project.</p>
 				<a href="#" class="open-details">More info</a>
 			</div>
 		</div>	
-		<div class="feature right">
+		<div class="feature right" id="health">
 			<div class="img"></div>
 			<div class="txt">
 				<h1>Health &amp; Wellness tourism</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+				<p>Our health project.</p>
 				<a href="#" class="open-details">More info</a>
 			</div>
 		</div>
-		<div class="detail">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
+		<div class="detail" id="for-sightseeing">
+			<h3>Be far. Feel local.</h3>
+			<p>Sightseeing tours may differ from each other completely. There are audio-guided tours, mobile-guided tours, sightseeing buses, travelbooks, simply strolling along the streets and so on. None of these options can provide real personal interaction, that makes your holiday lively and vibrant. Don’t misjudge private guides! They are not equal to all the listed ones above. This is the only option, where continuous interaction is possible, where your tour can be customized perfectly to you with the help of a real insider. Traveltrix’s sightseeing project guarantees live alternative to all others.</p>
+			<p>’I am perfectly familiar with all opportunities of sightseeing tours and unfortunately, there are two far ends among all. One, that is boring and represents some kind of competition between guide and tourists, who falls asleep first. And the other, where not the factual information, but learning by fun, legends and personal experiences rules. Traveltrix represents the second one, just as I do. That’s why I dedicated my time and knowledge to this site.’</p> 
+			<p><strong>Balint Tamas - professional tourguide</strong></p>
+		</div>
+		<div class="detail" id="for-health">
+			<h3>Be far. Feel healthy.</h3>
+			<p>All people need to stop sometimes for a while and to recover. Traveltrix’s health&wellness sub-site guides you through this refreshing, no matter, whether it is a spa, a salt-cave or a hiding wellness point on the countryside where to spend a longer period of time. Read the blog-posts or filter among the opportunities and let this site help you find out the way of refilling yourself with energy.</p>
+			<p>’Traveltrix. Be far. Feel home? This slogan made me interested a lot, however, firstly I didn’t get the main mission. As I consulted with the Traveltrix Team, I found out, Traveltrix is all about providing filtered highest quality to travelers in several fields. Getting healthier? Stretching out in hot thermal baths? Or expectional dentistry service for reasonable price? Hungary is the place to be, if someone wants to completely recover. Via Traveltrix, I can show you how!’</p> 
+			<p><strong>Eszter Cseke - health &amp; wellness expert</strong></p>
 		</div>	
-		<div class="feature">
+		<div class="feature" id="extreme">
 			<div class="img"></div>
 			<div class="txt">
 				<h1>Extreme tourism</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+				<p>Our extreme tourism project.</p>
 				<a href="#" class="open-details">More info</a>
 			</div>
 		</div>	
-		<div class="feature right">
+		<div class="feature right" id="mission">
 			<div class="img"></div>
 			<h1>Join our team!</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti...</p>
+			<p>Our mission.</p>
 			<a href="#" class="open-details">More info</a>
 		</div>
-		<div class="detail">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
+		<div class="detail" id="for-mission">
+			<h3>Mission One</h3>
+			<p>Real locals know much more about the resort and they are more authentic, than any marketing-oriented company, however, these local experts are hiding. Traveltrix helps them to show up and to provide a better place to be, where travellers can feel home from the very first moment!</p>	
+			<h3>Mission Two</h3>
+			<p>We believe in active refreshing and active holiday. The more adventure and more experience you participate in, the more energized you are after returning to home. We want to help change all people’s attitude, who travel abroad to visit a new place, however, they sleep and relax a lot there, instead of being involved and inspired by local secrets and jumping into the local life. We show them, how to do so!</p>
+			
+			<h3>Mission Three</h3>
+			<p>Your holiday, your time, your life! Traveltrix shows the way, how to perfectly customize your own holiday, how to be your own tour-agent, in order to experience as much as you can and only, what, with whom and at what cost you really want. </p>
+			<h3>Mission Four</h3>
+			<p>We want to create the first touristic social site, where all members are involved and motivated to create a better travelling life!</p>
+			
+			<p>We fight for these missions everyday. The more help and support we get, the faster we can shake up the  travelling culture. Please, if you want to join and to help the Traveltrix team, <a class="launch" href="#">leave us a message or say hello to us</a>!
+			</p>
+			
+		</div>
+		<div class="detail" id="for-extreme">
+			<h3>Be far. Feel Extreme.</h3>
+			<p>Gosh! Nothing can be more fulfilling than approaching the beautiful green fields by 200 km/h. Parachuting? Simply flying or steering an airplane? Rafting? Rock-climbing? I want all of them and possibly at the same time. Extreme sports are about to leave your comfort zone. Without leaving that, you have no chance to get to absolutely new discoveries, thoughts, feelings. Be brave and do not hesitate to jump! Noone can guarantee, that it will be the most comfortable experience in your life, but this is not the goal. The point is to find yourself. Give it a try! You’ll learn something new about yourself for sure and 90% is also fun. The last 10% is sweating! That’s a far deal.</p>
+			<p>’Traveltrix is a platform, where locals, basically experts of a concrete touristic field, have the perfect chance to show the hidden opportunities of their country. I am a fan of all kind of extreme sports and activities since I was born. That’s my life and I wanna share my experiences with others, too. I know all secret opportunities. Traveltrix provides the online platform. I guess, this is a good combination.’</p>
+			<p><strong>Peter Miklovicz - extreme sportist</strong></p>
 		</div>		
 	</section>
 	<div class="hr"></div>
 	<section id="about">
 		<div class="aboutus">
 			<h1>About Us</h1>
-			<p><b>Traveltrix. Be far. Feel home!</b></p>
+			<p><strong>Traveltrix. Be far. Feel home!</strong></p>
 			<p>Have you ever felt uneasy, bored, unoriented or simply lost somewhere around the World? Or have you ever returned to home after a pretty costly holiday without being fully inspired by local experience, people and with an embarrassing feeling ’Gosh! What on earth did I do over there? I didn’t exploit all the opportunities, I could. However, I spent a lot of money on accommodation and flight.’ That’s a pity!</p> 
 			<p>Traveltrix is a solution for all these.</p> 
 			<p>We believe in locals, as…</p>
 			<ol>
-				<li>Noone knows resorts, cities and their secret beauties better, than they do.</li>
+				<li>No one knows resorts, cities and their secret beauties better, than they do.</li>
 				<li>Locals love showing travellers the real side of their living place and life, however…</li>
 				<li>Real, authentic insiders are hiding and they lack the interface to reach travellers.</li>
 			</ol>
@@ -120,12 +144,9 @@
 				<li>Self-organising is often far cheaper, than hiring a travel agent!</li>
 			</ol>
 			<p>There is no such a suitable interface, where local experts and self-organising travellers can meet each other and match their wishes.</p> 
-			<p>Traveltrix is a start-up company, which recently launched after winning the third price in general on a renowned start-up competition and the first place in online and mobile application category.</p>
-			<p>Traveltrix helps local experts in tourism to share all the secrets with travellers and it provides an interface for self-organising travellers to be proactive and organise their own holiday according to their real dreams.</p>
+			<p>Traveltrix is a start-up company, which recently launched after winning the third price in general on a renowned start-up competition and the first place in online and mobile application category Traveltrix helps local experts in tourism to share all the secrets with travellers and it provides an interface for self-organising travellers to be proactive and organise their own holiday according to their real dreams.</p>
 			<p>Basically two sorts of touristic companies exist. One, which runs internationally without any local representatives, and the other one, which is purely local. None of them are good enough. Either, they do not care about the real wishes and focus on mass-customization or they have no real effect on customer habits and travelling culture.</p> 
-			<p>Traveltrix.org combines both - internationality and locality in order to evangelize the self-organising travelling culture and help locals to meet proactive international travellers from all around the world.</p> 
-			<p>That’s, what we believe in and fight for it! Let’s shake up tourism and make it more personal in order to help travellers to be far and feel home, no matter, where they travel to.</p> 
-			<p>Traveltrix. Be far. Feel home.</p>
+			<p>Traveltrix.org combines both - internationality and locality in order to evangelize the self-organising travelling culture and help locals to meet proactive international travellers from all around the world. That’s, what we believe in and fight for it! Let’s shake up tourism and make it more personal in order to help travellers to be far and feel home, no matter, where they travel to.</p> 
 		</div>
 		<div class="hr m"></div>
 		<div class="about" id="akos">
@@ -145,21 +166,21 @@
 		<section id="quotes">
 			<div class="quote">
 				<div class="img">
-					<img src="img/person.png" alt="avatar" />
+					<img src="img/eszter.png" alt="avatar" />
 				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
+				<p>"As I consulted with the Traveltrix Team, I found out, Traveltrix is all about providing filtered highest quality to travelers in several fields." <strong>Eszter Cseke</strong></p>
 			</div>	
 			<div class="quote">
 				<div class="img">
-					<img src="img/person.png" alt="avatar" />					
+					<img src="img/peter.png" alt="avatar" />					
 				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
+				<p>"I know all secret opportunities. Traveltrix provides the online platform. I guess, this is a good combination." <strong>Peter Miklovicz</strong></p>
 			</div>
 			<div class="quote">
 				<div class="img">
-					<img src="img/person.png" alt="avatar" />					
+					<img src="img/balint.png" alt="avatar" />					
 				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
+				<p>"Traveltrix is where not the factual information, but learning by fun, legends and personal experiences rule." <strong>Balint Tamas</strong></p>
 			</div>	
 		</section>
 	</div>
@@ -188,7 +209,7 @@
 						</div>
 						<textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
 					</fieldset>
-					<input type="submit" value="Send" />
+					<input type="submit" value="Send" /> <span class="resp"></span>
 				</div>
 				<div id="contactform-bg"></div>
 			</form>
