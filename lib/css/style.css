@@ -572,7 +572,7 @@ a.open-details{
 	color:white;
 }
 
-#about h1{
+#about h1,#features h1.b{
 	font-size:36px;
 	color:#55AB48;
 }

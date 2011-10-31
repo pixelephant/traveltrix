@@ -25,7 +25,7 @@
 		<nav>
 			<ul class="clearfix">
 				<li class="active"><a href="#hello">Hello</a></li>
-				<li><a href="#features">Our Projects</a></li>
+				<li><a href="#features">Our projects</a></li>
 				<li><a href="#about">About us</a></li>	
 <!--				<li><a href="#quotes">Quotes</a></li> -->
 				<li><a href="#cta">Contact</a></li>
@@ -59,6 +59,7 @@
 	</section>
 	<div class="hr"></div>
 	<section id="features">
+		<h1 class="b">Our projects</h1>
 		<div id="sightseeing" class="feature">
 			<div class="img"></div>
 			<div class="txt">
@@ -150,13 +151,13 @@
 		</div>
 		<div class="hr m"></div>
 		<div class="about" id="akos">
-			<h2>Ákos Fodor</h2>
+			<h2>Ákos Fodor - CEO</h2>
 			<p>“I will never forget my best pal’s words: ‘Hungary is not sooo bad country’. I understand, but I feel sorry for the depression and the irony, that characterize a few Hungarians. They must be blind for beauty. Budapest and Hungary are simply wonderful. I wake up and go to sleep here everyday, but I never miss a day to see the River Danube, to sit down at its bank to eat a sandwich or to sip a beer. I simply love living here and being a Hungarian.</p>
 			<p> I am an economist, but half-time professional tour-guide, too and I was always glad to stroll along the secret beauties with curious travellers. I consider myself a local expert and I know, so many others are hiding all around the World. Where are you? I hope, you’re out there. Traveltrix is a vision of mine. Traveltrix will be an international place for local heroes, ready to provide something extraordinary and for proactive travellers, who cannot be satisfied by mass-customized, general scenes. Traveltrix matches them and helps to be far and feel home!”</p>
 		</div>
 		<div class="hr m"></div>
 		<div class="about" id="sandor">
-			<h2>Sándor R. Kiss</h2>
+			<h2>Sándor R. Kiss - CEO</h2>
 			<p>“I was already 16 years old, when I got the first chance to leave my home country, Hungary, as a tourist. I organized the whole trip by myself. By the time I’ve realized, that if you are at a completely new place, you never have enough time and you lack the real orientation, how to explore the local secrets, and at the end of the day, you missed and passed a lot of secret highlights and left the visited place without real experiences.</p>
 			<p>I believe that Traveltrix spares time for the travellers and provides value-added offers. I dedicate my job to understand people’s needs as tourists, and create them simple, informative, experience-focused solutions, wherever they travel on the Earth.”</p>
 		</div>
