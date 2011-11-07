@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<title>Második feladat</title>
+		
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script>
+        
+        $("document").ready(function(){
+           $("#add").click(function(){
+			
+				var text = $("#element").val();
+				if(text.length > 4){
+					$("#list").prepend("<li>"+text+"<input type='button' class='del' value='Törlés' /></li>");
+				}
+				else alert("túl rövid");
+			});
+        });
+
+		$(".del").live("click",function(){
+			$(this).parent().remove();
+		});
+        
+        </script>
+		
+	</head>
+    
+    <body>
+    
+    <h1>
+        Második feladat
+    </h1>
+    
+    <input type="text" id="element" /><input type="button" id="add" value="Hozzáadás">
+    
+    <ul id="list">
+    	
+    </ul>
+    
+    </body>
+    </html>
