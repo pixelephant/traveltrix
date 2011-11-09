@@ -13,7 +13,8 @@
 		<title>Traveltrix - Be far. Feel home.</title>
 		
 		<link rel="stylesheet" href="lib/css/style.css" />
-
+		<link rel="stylesheet" href="lib/css/video-js.css" />
+		<link rel="stylesheet" href="lib/css/ui-lightness/style.css" />
 		
 		<script src="lib/js/modernizr-2.min.js"></script>
 	</head>
@@ -30,6 +31,11 @@
 			<div id="search">
 				<form action="#" id="search-form">
 					<a href="#" id="advanced-button">Advanced</a>
+					<div id="search-options">
+						<p><label for="health">Health</label><input type="checkbox" name="health" id="health" /></p>
+						<p><label for="extreme">Extreme</label><input type="checkbox" name="exterem" id="extreme" /></p>
+						<p><label for="sights">Sights</label><input type="checkbox" name="sights" id="sights" /></p>
+					</div>
 					<input type="search" name="keyword" id="keyword" placeholder="Search..." />
 					<a href="#" id="search-button"></a>
 				</form>
@@ -48,9 +54,32 @@
 					<img src="img/slide1.jpg" alt="" />
 				</div>
 				<div class="slide">
-					<div class="vimeo">
-						<iframe src="http://player.vimeo.com/video/29870552?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
-					</div>
+						<div class="video-js-box">
+						    <!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody -->
+						    <video id="example_video_1" class="video-js" width="960" height="330" controls="controls" preload="auto" poster="http://video-js.zencoder.com/oceans-clip.png">
+						      <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+						      <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm; codecs="vp8, vorbis"' />
+						      <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg; codecs="theora, vorbis"' />
+						      <!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. -->
+						      <object id="flash_fallback_1" class="vjs-flash-fallback" width="960" height="330" type="application/x-shockwave-flash"
+						        data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+						        <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+						        <param name="allowfullscreen" value="true" />
+						        <param name="flashvars" value='config={"playlist":["http://video-js.zencoder.com/oceans-clip.png", {"url": "http://video-js.zencoder.com/oceans-clip.mp4","autoPlay":false,"autoBuffering":true}]}' />
+						        <!-- Image Fallback. Typically the same as the poster image. -->
+						        <img src="http://video-js.zencoder.com/oceans-clip.png" width="960" height="330" alt="Poster Image"
+						          title="No video playback capabilities." />
+						      </object>
+						    </video>
+						    <!-- Download links provided for devices that can't play video in the browser. -->
+						    <p class="vjs-no-video"><strong>Download Video:</strong>
+						      <a href="http://video-js.zencoder.com/oceans-clip.mp4">MP4</a>,
+						      <a href="http://video-js.zencoder.com/oceans-clip.webm">WebM</a>,
+						      <a href="http://video-js.zencoder.com/oceans-clip.ogv">Ogg</a><br>
+						      <!-- Support VideoJS by keeping this link. -->
+						      <a href="http://videojs.com">HTML5 Video Player</a> by VideoJS
+						    </p>
+						  </div>
 				</div>
 			</div>
 		</section>
@@ -131,8 +160,8 @@
 			<div id="points">
 				<h2>5 ok, amiért a magánturizmus élménygazdagabb</h2>
 				<ul>
-					<li data-text="egy">Teljesen egyénre szabott túrák, egyedi élmények</li>
-					<li data-text="ketto" class="active">Nincsenek kötöttségek, nem kell a csoporttal rajban mozogni</li>
+					<li class="active" data-text="egy">Teljesen egyénre szabott túrák, egyedi élmények</li>
+					<li data-text="ketto">Nincsenek kötöttségek, nem kell a csoporttal rajban mozogni</li>
 					<li data-text="harom">Az ország rejtett szépségeit is felfedezheti</li>
 					<li data-text="negy">Pénztárcabarát</li>
 					<li data-text="ot">Helyi kultúra és életérzés</li>
@@ -183,6 +212,9 @@
 		</script>
 		<script>
 window.jQuery || document.write('<script src="lib/js/jquery-1.7.js">\x3C/script>')
+		</script>
+		<script type="text/javascript" src="lib/js/jquery-ui.js">
+		<script type="text/javascript" src="lib/js/video.js">
 		</script>
 		<script type="text/javascript" src="lib/js/main.js">
 		</script>

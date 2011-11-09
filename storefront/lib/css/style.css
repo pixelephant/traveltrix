@@ -285,6 +285,30 @@ header nav ul li a span{
 	font-weight:normal;
 }
 
+#search-form{
+	position:relative;
+}
+
+#search-options{
+	position:absolute;
+	background:red;
+	top:25px;
+	left:2px;
+	z-index:100;
+	display:none;
+	width:240px;
+}
+
+#search-options p{
+	display:block;
+	overflow:hidden;
+}
+
+#search-options input[type="checkbox"],#search-options label{
+	display:block;
+	float:left;
+}
+
 #search{
 	padding:25px 0;
 	float:right;
@@ -363,7 +387,7 @@ header nav ul li a span{
 	position:relative;
 	z-index:1;
 	height:330px;
-	background:#aaa;
+	background:black;
 }
 
 #top-layer{
@@ -394,17 +418,13 @@ header nav ul li a span{
 	position:absolute;
 	top:10px;
 	right:10px;
+	z-index:1000;
 }
 
 .slide{
 	width:960px;
 	height:330px;
 	float:left;
-}
-
-.vimeo{
-	text-align:center;
-	margin-top:20px;
 }
 
 #basic-form{
@@ -459,7 +479,14 @@ header nav ul li a span{
 }
 
 #features{
-	background:#eee;
+  	background-color: #F5F5F5;
+  	background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#DCDCDC)); 
+  	background-image: -webkit-linear-gradient(top, #F5F5F5, #DCDCDC); 
+  	background-image:    -moz-linear-gradient(top, #F5F5F5, #DCDCDC); 
+  	background-image:     -ms-linear-gradient(top, #F5F5F5, #DCDCDC); 
+  	background-image:      -o-linear-gradient(top, #F5F5F5, #DCDCDC); 
+  	background-image:         linear-gradient(top, #F5F5F5, #DCDCDC);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F5F5F5', EndColorStr='#DCDCDC'); 
 	padding-top:60px;
 	overflow:hidden;
 }
