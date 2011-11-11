@@ -95,7 +95,7 @@ sub { bottom: -0.25em; }
 
 html{
 	font-family: "Myriad Pro",Arial,sans;
-	background:#E2E9E2;
+	background: url(../../img/bg-map.jpg) repeat-x #F1F2F4;
 }
 
 /* =============================================================================
@@ -225,7 +225,10 @@ header{
 	background-image:     -ms-linear-gradient(top, #5962A5, #242C74); 
 	background-image:      -o-linear-gradient(top, #5962A5, #242C74); 
 	background-image:         linear-gradient(top, #5962A5, #242C74);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#5962A5', EndColorStr='#242C74'); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#5962A5', EndColorStr='#242C74');
+	box-shadow: 0 4px 4px -2px #333;
+	-moz-box-shadow: 0 4px 4px -2px #333;
+	-webkit-box-shadow: 0 4px 4px -2px #333;
 }
 
 header nav{
@@ -376,10 +379,19 @@ header nav ul li a span{
 #main{
 	width:960px;
 	margin:0 auto;
+	-moz-box-shadow:
+        5px 0 5px -5px #333,
+        -5px 0 5px -5px #333;
+    -webkit-box-shadow:
+        5px 0 5px -5px #333,
+        -5px 0 5px -5px #333;
+    box-shadow:
+        5px 0 5px -5px #333,
+        -5px 0 5px -5px #333;
 }
 
 #form-wrap{
-	background:#ddd;
+	background:url(../../img/illu.jpg) no-repeat bottom #B6DCF3;
 	height:490px;
 }
 
@@ -436,6 +448,10 @@ header nav ul li a span{
 	background:white;
 	border:10px solid #DCF0FA;
 	top:-60px;
+	-webkit-box-shadow: 0 1px 20px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0 1px 20px rgba(0,0,0,0.75);
+	box-shadow: 0 1px 20px rgba(0,0,0,0.75);
+	
 }
 
 #basic-form h3{
@@ -506,6 +522,12 @@ header nav ul li a span{
 	width:370px;
 	float:left;
 	background:#5EBAE3;
+	-moz-box-shadow:
+        inset -5px 0 5px -5px #333;
+    -webkit-box-shadow:
+        inset -5px 0 5px -5px #333;
+    box-shadow:
+        inset -5px 0 5px -5px #333;
 }
 
 #points h2{
