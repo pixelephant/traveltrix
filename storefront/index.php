@@ -45,13 +45,13 @@
 	<div id="main">
 		<section id="slider">
 			<div id="top-layer">
-				<img src="img/logo.png" width="250" alt="" />
+				<img src="img/sliderLogo.png" alt="Traveltrix logo" />
 				<h2>Create your dream trip and be your own boss. Get Started!</h2>
 			</div>
-			<a class="nav" href="#">-----></a>
+			<a class="nextSlide nav" href="#"></a>
 			<div id="slides">
 				<div class="slide">
-					<img src="img/slide1.jpg" alt="" />
+					<img src="img/flow.png" alt="" />
 				</div>
 				<div class="slide">
 						<div class="video-js-box">
@@ -159,13 +159,13 @@
 		<section id="why">
 			<div id="points">
 				<h2>5 ok, amiért a magánturizmus élménygazdagabb</h2>
-				<ul>
-					<li class="active" data-text="egy">Teljesen egyénre szabott túrák, egyedi élmények</li>
-					<li data-text="ketto">Nincsenek kötöttségek, nem kell a csoporttal rajban mozogni</li>
-					<li data-text="harom">Az ország rejtett szépségeit is felfedezheti</li>
-					<li data-text="negy">Pénztárcabarát</li>
-					<li data-text="ot">Helyi kultúra és életérzés</li>
-				</ul>
+				<ol>
+					<li class="active egy" data-text="egy">Teljesen egyénre szabott túrák, egyedi élmények</li>
+					<li data-text="ketto" class="ketto">Nincsenek kötöttségek, nem kell a csoporttal rajban mozogni</li>
+					<li data-text="harom" class="harom">Az ország rejtett szépségeit is felfedezheti</li>
+					<li data-text="negy" class="negy">Pénztárcabarát</li>
+					<li data-text="ot" class="ot">Helyi kultúra és életérzés</li>
+				</ol>
 			</div>
 			<div id="text">
 				<ul>

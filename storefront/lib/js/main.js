@@ -35,11 +35,18 @@
 $("document").ready(function(){
 	
 
-	$("#points ul li").click(function(){
+	$("#points ol li").click(function(){
 		var $this = $(this);
 		var id = $this.data("text");
 		$this.addClass("active").siblings().removeClass("active");
 		$("#text ul").scrollTo($("#"+id),300);
+	});
+	
+	
+	$("#slider a.nav").toggle(function(){
+		$(this).removeClass("nextSlide").addClass("prevSlide");
+	},function(){
+		$(this).removeClass("prevSlide").addClass("nextSlide");
 	});
 	
 	$('#main').serialScroll({

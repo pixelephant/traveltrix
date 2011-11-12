@@ -407,7 +407,7 @@ header nav ul li a span{
 	height:235px;
 	margin:0 auto;
 	text-align:center;
-	margin-top:95px;
+	margin-top:50px;
 	position:absolute;
 	left:50%;
 	margin-left:-300px;
@@ -431,6 +431,24 @@ header nav ul li a span{
 	top:10px;
 	right:10px;
 	z-index:1000;
+	width:28px;
+	height:28px;
+}
+
+#slider a.nextSlide{
+	background: url(../../img/arrowNext.png) no-repeat center;
+}
+
+#slider a.nextSlide:hover{
+	background: url(../../img/arrowNext_hover.png) no-repeat center;
+}
+
+#slider a.prevSlide{
+	background: url(../../img/arrowPrev.png) no-repeat center;
+}
+
+#slider a.prevSlide:hover{
+	background: url(../../img/arrowPrev_hover.png) no-repeat center;
 }
 
 .slide{
@@ -516,6 +534,7 @@ header nav ul li a span{
 #why{
 	overflow:hidden;
 	background:white;
+	border-top:1px solid white;
 }
 
 #points{
@@ -536,7 +555,7 @@ header nav ul li a span{
 	color:white;
 }
 
-#points ul{
+#points ol,#points ul{
 	margin:0;
 	padding:0;
 }
@@ -553,8 +572,48 @@ header nav ul li a span{
 	cursor:pointer;
 }
 
+.egy{
+	background: url(../../img/1.png) no-repeat 10px center;
+}
+
+.egy.active{
+	background: url(../../img/1_active.png) no-repeat 10px center;
+}
+
+.ketto{
+	background: url(../../img/2.png) no-repeat 10px center;
+}
+
+.ketto.active{
+	background: url(../../img/2_active.png) no-repeat 10px center;
+}
+
+.harom{
+	background: url(../../img/3.png) no-repeat 10px center;
+}
+
+.harom.active{
+	background: url(../../img/3_active.png) no-repeat 10px center;
+}
+
+.negy{
+	background: url(../../img/4.png) no-repeat 10px center;
+}
+
+.negy.active{
+	background: url(../../img/4_active.png) no-repeat 10px center;
+}
+
+.ot{
+	background: url(../../img/5.png) no-repeat 10px center;
+}
+
+.ot.active{
+	background: url(../../img/5_active.png) no-repeat 10px center;
+}
+
 #points li.active{
-	background:white;
+	background-color:white;
 	color: #5EBAE3;
 }
 
