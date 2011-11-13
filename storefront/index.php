@@ -19,7 +19,14 @@
 		<script src="lib/js/modernizr-2.min.js"></script>
 	</head>
 	<body id="home">
-	
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) {return;}
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=136997593064327";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 	<header>
 		<nav>
 			<ul>
@@ -42,6 +49,32 @@
 			</div>
 		</nav>
 	</header>
+	<div id="social">
+		<h1>The easiest way to magánturizmus.</h1>
+		<div id="ballon">
+			<div class="link">
+					<div class="fb-like" data-href="pixelephant.hu" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+				</div>
+				<div class="link">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pixelephant">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+				</div>
+				<div class="link">
+					<!-- Place this tag where you want the +1 button to render -->
+					<g:plusone size="medium"></g:plusone>
+
+					<!-- Place this render call where appropriate -->
+					<script type="text/javascript">
+					  window.___gcfg = {lang: 'en-GB'};
+
+					  (function() {
+					    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+					    po.src = 'https://apis.google.com/js/plusone.js';
+					    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					  })();
+					</script>
+				</div>
+			</div>
+	</div>
 	<div id="main">
 		<section id="slider">
 			<div id="top-layer">

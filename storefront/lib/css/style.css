@@ -376,6 +376,34 @@ header nav ul li a span{
 	height:25px;
 }
 
+#social{
+	width:960px;
+	margin:0 auto;
+	height:40px;
+	overflow:hidden;
+	padding:10px 0;
+}
+
+#social h1{
+	margin:0;
+	float:left;
+}
+
+#ballon{
+	float:right;
+	width:auto;
+	height:41px;
+	background:url(../../img/social_links_bg.png) no-repeat center top;
+	padding-left:12px;
+}
+
+#ballon .link{
+	display:block;
+	padding-top:6px;
+	margin-right:2px;
+	float:left;
+}
+
 #main{
 	width:960px;
 	margin:0 auto;
