@@ -1,0 +1,35 @@
+#inviteGuide input{
+	position: absolute;
+	left: 70px;
+}
+
+#editGuide input{
+	position: absolute;
+	left: 120px;		
+}
+
+#editGuide textarea{
+	margin-left: 65px;
+	height: 100px;
+	width: 500px;		
+}
+
+#insertTour input, select,#editTour input, select{
+	position: absolute;
+	left: 120px;
+}
+
+#insertTour textarea,#editTour textarea{
+	margin-left: 15px;
+	height: 100px;
+	width: 500px;		
+}
+
+img{
+	max-height: 50px;
+	max-width: 50px;	
+}
+
+.row{
+	min-height: 35px;	
+}
