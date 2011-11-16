@@ -69,10 +69,10 @@
 
 		if(isset($_FILES)){
 			
-			$target_path = '../../' . $_guide_profile_directory . $_SESSION['guide_id'] . '_profile.jpg';
-			$thumbnail_path = '../../' . $_guide_profile_thumbnail_directory . $_SESSION['guide_id'] . '_profile.jpg';
+			$target_path = '../../' . $_guide_profile_directory . $_SESSION['provider_id'] . '_profile.jpg';
+			$thumbnail_path = '../../' . $_guide_profile_thumbnail_directory . $_SESSION['provider_id'] . '_profile.jpg';
 			move_uploaded_file($_FILES['photo']['tmp_name'], $target_path);
-			$_POST['photo'] = $_SESSION['guide_id'] . '_profile.jpg';
+			$_POST['photo'] = $_SESSION['provider_id'] . '_profile.jpg';
 			
 			copy($target_path, $thumbnail_path);
 			
@@ -99,7 +99,7 @@
 		
 		}
 		
-		$cond['id'] = $_SESSION['guide_id'];
+		$cond['id'] = $_SESSION['provider_id'];
 		
 		$action = $main->update_guide($data,$cond);
 		
@@ -120,7 +120,7 @@
 		$data = array_filter($_POST);
 		unset($data['action']);
 		
-		$data['guide_id'] = $_SESSION['guide_id'];
+		$data['provider_id'] = $_SESSION['provider_id'];
 		
 		$action = $main->insert_tour($data);
 		

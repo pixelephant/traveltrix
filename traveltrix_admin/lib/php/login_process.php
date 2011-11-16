@@ -14,10 +14,10 @@ if($_POST['action'] == 'login'){
 	$cond['email'] = $_POST['email'];
 	$cond['password'] = $_POST['password'];
 
-	$user = $main->get_guide($cond);
+	$user = $main->get_provider($cond);
 	
 	if($user['count'] == 1){
-		$_SESSION['guide_id'] = $user[0]['id'];
+		$_SESSION['provider_id'] = $user[0]['id'];
 		header("Location: " . $_siteUrl . "index.php");
 	}else{
 		header("Location: " . $_siteUrl . "login.php");

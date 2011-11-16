@@ -8,15 +8,15 @@ class admin extends db{
 	
 	//SELECT
 	
-	public function get_guide($cond=''){
+	public function get_provider($cond=''){
 
 		if($cond != ''){
 			$cond = GUMP::sanitize($cond);
 		}
 		
-		$table = 'guides';
-		$col = 'id,password,name,description,email,phone,referal_id,photo,updated_at';
-			
+		$table = 'providers';
+		$col = 'id,password,name,description,email,phone,address,website,is_guide,referal_id,photo,updated_at';
+		
 		return $this->sql_select($table,$col,$cond);
 		
 	}
@@ -34,25 +34,25 @@ class admin extends db{
 		
 	}
 	
-	public function get_tours($cond=''){
+	public function get_services($cond=''){
 	
 		if($cond != ''){
 			$cond = GUMP::sanitize($cond);
 		}
 	
-		$table = 'tours';
-		$col = 'id,tourname,short_description,long_description,category_id,duration,guide_id,updated_at';
+		$table = 'services';
+		$col = 'id,service_name,short_description,long_description,category_id,duration,price,provider_id,is_tour,updated_at';
 		
 		return $this->sql_select($table,$col,$cond);
 	
 	}
 	
-	public function get_tour_photos($tour_id){
+	public function get_service_photos($service_id){
 	
-		$table = 'tour_photos';
-		$col = 'tour_id,photo';
+		$table = 'service_photos';
+		$col = 'service_id,photo';
 		
-		$cond['tour_id'] = (int)$tour_id;
+		$cond['service_id'] = (int)$service_id;
 		
 		return $this->sql_select($table,$col,$cond);
 	
@@ -60,7 +60,7 @@ class admin extends db{
 	
 	//INSERT
 	
-	public function insert_guide($params){
+	public function insert_provider($params){
 		
 		if(!is_array($params)){
 			return FALSE;
@@ -74,6 +74,9 @@ class admin extends db{
 			'description'       => 'trim|sanitize_string',
 			'email'    	  => 'trim|sanitize_email',
 			'phone'       => 'trim|sanitize_numbers_only',
+			'address'       => 'trim|sanitize_string',
+			'website'       => 'trim|sanitize_string',
+			'is_guide'       => 'trim|sanitize_numbers_only',
 			'referal_id'       => 'trim|sanitize_numbers_only',
 			'photo'       => 'trim|sanitize_string'
 		);
@@ -83,6 +86,9 @@ class admin extends db{
 			'name'       => 'required|alpha_dash',
 			'email'       => 'required|valid_email',
 			'phone'       => 'numeric',
+			'address'       => 'alpha_dash',
+			'website'       => 'alpha_dash,valid_url',
+			'is_guide'       => 'numeric',
 			'referal_id'       => 'required|numeric',
 			'photo'       => 'valid_email'
 		);
@@ -94,23 +100,23 @@ class admin extends db{
 		//Validálás vége
 		
 		if($validate === TRUE){
-			return $this->sql_insert('guides',$params);
+			return $this->sql_insert('providers',$params);
 		}else{
 			return $validate;
 		}
 	}
 
-	public function invite_guide($name,$email,$password){
+	public function invite_provider($name,$email,$password){
 	
 		$params['name'] = $name;
 		$params['email'] = $email;
 		$params['password'] = $password;
 	
-		return $this->insert_guide($params);
+		return $this->insert_provider($params);
 	
 	}
 	
-	public function insert_tour($params){
+	public function insert_service($params){
 		
 		if(!is_array($params)){
 			return FALSE;
@@ -119,21 +125,25 @@ class admin extends db{
 		$params = GUMP::sanitize($parms);		
 		
 		$filters = array(
-			'tourname'    => 'trim|sanitize_string',
+			'service_name'    => 'trim|sanitize_string',
 			'short_description'       => 'trim|sanitize_string',
 			'long_description'       => 'trim|sanitize_string',
 			'category_id'    	  => 'trim|sanitize_numbers_only',
 			'duration'       => 'trim|sanitize_numbers_only',
-			'guide_id'       => 'trim|sanitize_numbers_only'
+			'price'       => 'trim|sanitize_numbers_only',
+			'is_tour'       => 'trim|sanitize_numbers_only',
+			'provider_id'       => 'trim|sanitize_numbers_only'
 		);
 		
 		$rules = array(
-			'tourname'    => 'required',
+			'service_name'    => 'required',
 			'short_description'       => 'required',
 			'long_description'       => 'required',
 			'category_id'    	  => 'required|numeric',
 			'duration'       => 'required|numeric',
-			'guide_id'       => 'required|numeric'
+			'price'       => 'required|numeric',
+			'is_tour'       => 'required|numeric',
+			'provider_id'       => 'required|numeric'
 		);
 		
 		$data = GUMP::filter($data, $filters);
@@ -143,25 +153,25 @@ class admin extends db{
 		//Validálás vége
 		
 		if($validate === TRUE){
-			return $this->sql_insert('tours',$params);
+			return $this->sql_insert('services',$params);
 		}else{
 			return $validate;
 		}
 	}
 	
-	public function insert_tour_photo($tour_id,$photo){
+	public function insert_service_photo($service_id,$photo){
 	
-		$params['tour_id'] = (int)$tour_id;
+		$params['service_id'] = (int)$service_id;
 		$params['photo'] = $photo;
 	
 		$params = GUMP::sanitize($parms);
 		
-		return $this->sql_insert('tour_photos',$params)
+		return $this->sql_insert('service_photos',$params);
 	}
 	
 	//UPDATE
 	
-	public function update_guide($data_array,$cond=''){
+	public function update_provider($data_array,$cond=''){
 
 		$cond = GUMP::sanitize($cond);
 		$data_array = GUMP::sanitize($data_array);		
@@ -169,10 +179,13 @@ class admin extends db{
 		$filters = array(
 			'password'    => 'trim|sanitize_string',
 			'name'       => 'trim|sanitize_string',
-			'description' => 'trim|sanitize_string',
+			'description'       => 'trim|sanitize_string',
 			'email'    	  => 'trim|sanitize_email',
 			'phone'       => 'trim|sanitize_numbers_only',
-			'referal_id'  => 'trim|sanitize_numbers_only',
+			'address'       => 'trim|sanitize_string',
+			'website'       => 'trim|sanitize_string',
+			'is_guide'       => 'trim|sanitize_numbers_only',
+			'referal_id'       => 'trim|sanitize_numbers_only',
 			'photo'       => 'trim|sanitize_string'
 		);
 		
@@ -181,8 +194,13 @@ class admin extends db{
 			'name'       => 'alpha_dash',
 			'email'       => 'valid_email',
 			'phone'       => 'numeric',
-			'referal_id'  => 'numeric',
+			'address'       => 'alpha_dash',
+			'website'       => 'alpha_dash,valid_url',
+			'is_guide'       => 'numeric',
+			'referal_id'       => 'numeric',
+			'photo'       => 'valid_email'
 		);
+		
 		
 		$data_array = GUMP::filter($data_array, $filters);
 		$cond = GUMP::filter($cond, $filters);
@@ -193,14 +211,14 @@ class admin extends db{
 		//Validálás vége
 		
 		if($validate === TRUE && $validate2 === TRUE){
-			return $this->sql_update('guides',$data_array,$cond);
+			return $this->sql_update('providers',$data_array,$cond);
 		}else{
 			return $validate . $validate2;
 		}
 			
 	}
 	
-	public function update_tour($data_array,$cond=''){
+	public function update_service($data_array,$cond=''){
 		
 		if(!is_array($params)){
 			return FALSE;
@@ -209,21 +227,25 @@ class admin extends db{
 		$params = GUMP::sanitize($parms);		
 		
 		$filters = array(
-			'tourname'    => 'trim|sanitize_string',
+			'service_name'    => 'trim|sanitize_string',
 			'short_description'       => 'trim|sanitize_string',
 			'long_description'       => 'trim|sanitize_string',
 			'category_id'    	  => 'trim|sanitize_numbers_only',
 			'duration'       => 'trim|sanitize_numbers_only',
-			'guide_id'       => 'trim|sanitize_numbers_only'
+			'price'       => 'trim|sanitize_numbers_only',
+			'is_tour'       => 'trim|sanitize_numbers_only',
+			'provider_id'       => 'trim|sanitize_numbers_only'
 		);
 		
 		$rules = array(
-			'tourname'    => 'required',
+			'service_name'    => 'required',
 			'short_description'       => 'required',
 			'long_description'       => 'required',
 			'category_id'    	  => 'required|numeric',
 			'duration'       => 'required|numeric',
-			'guide_id'       => 'required|numeric'
+			'price'       => 'required|numeric',
+			'is_tour'       => 'required|numeric',
+			'provider_id'       => 'required|numeric'
 		);
 		
 		$adatok = GUMP::filter($adatok, $filters);
@@ -233,26 +255,26 @@ class admin extends db{
 		//Validálás vége
 		
 		if($validate === TRUE){
-			return $this->sql_update('tours',$data_array,$cond);
+			return $this->sql_update('services',$data_array,$cond);
 		}else{
 			return $validate;
 		}
 	}
 	
-	public function update_tour_by_id($data_array,$id){
+	public function update_service_by_id($data_array,$id){
 	
-		if(!is_guides_tour($id,$_SESSION['guide_id'])){
+		if(!is_providers_service($id,$_SESSION['provider_id'])){
 			return FALSE;
 		}
 	
 		$cond['id'] = $id;
-		return $this->update_tour($data_array,$cond);
+		return $this->update_service($data_array,$cond);
 	
 	}
 	
 	//DELETE
 	
-	public function delete_guide($cond=''){
+	public function delete_provider($cond=''){
 	
 		if(!is_array($cond)){
 			return FALSE;
@@ -263,10 +285,13 @@ class admin extends db{
 		$filters = array(
 			'password'    => 'trim|sanitize_string',
 			'name'       => 'trim|sanitize_string',
-			'description' => 'trim|sanitize_string',
+			'description'       => 'trim|sanitize_string',
 			'email'    	  => 'trim|sanitize_email',
 			'phone'       => 'trim|sanitize_numbers_only',
-			'referal_id'  => 'trim|sanitize_numbers_only',
+			'address'       => 'trim|sanitize_string',
+			'website'       => 'trim|sanitize_string',
+			'is_guide'       => 'trim|sanitize_numbers_only',
+			'referal_id'       => 'trim|sanitize_numbers_only',
 			'photo'       => 'trim|sanitize_string'
 		);
 		
@@ -275,7 +300,11 @@ class admin extends db{
 			'name'       => 'alpha_dash',
 			'email'       => 'valid_email',
 			'phone'       => 'numeric',
-			'referal_id'  => 'numeric',
+			'address'       => 'alpha_dash',
+			'website'       => 'alpha_dash,valid_url',
+			'is_guide'       => 'numeric',
+			'referal_id'       => 'numeric',
+			'photo'       => 'valid_email'
 		);
 		
 		$cond = GUMP::filter($cond, $filters);
@@ -285,37 +314,37 @@ class admin extends db{
 		//Validálás vége
 		
 		if($validate === TRUE){
-			return $this->sql_delete('guides',$cond);
+			return $this->sql_delete('providers',$cond);
 		}else{
 			return $validate;
 		}	
 		
 	}	
 
-	public function delete_guide_photo($guide_id){
+	public function delete_provider_photo($provider_id){
 	
 		$data['photo'] = '';
-		$cond['id'] = (int)$guide_id;
+		$cond['id'] = (int)$provider_id;
 		
-		return $this->update_guide($data,$cond);
+		return $this->update_provider($data,$cond);
 	
 	}
 
-	public function delete_tour($tour_id){
+	public function delete_service($service_id){
 	
-		$cond['guide_id'] = (int)$_SESSION['guide_id'];
-		$cond['id'] = (int)$tour_id;
+		$cond['provider_id'] = (int)$_SESSION['provider_id'];
+		$cond['id'] = (int)$service_id;
 	
-		return $this->sql_delete('tours',$cond);
+		return $this->sql_delete('services',$cond);
 	
 	}
 	
-	public function delete_tour_photo($photo,$tour_id){
+	public function delete_service_photo($photo,$service_id){
 	
 		$cond['photo'] = $photo;
-		$cond['tour_id'] = (int)$tour_id;
+		$cond['service_id'] = (int)$service_id;
 	
-		return $this->sql_delete('tour_photos',$cond);
+		return $this->sql_delete('service_photos',$cond);
 	
 	}
 
@@ -365,29 +394,29 @@ class admin extends db{
 		}
 	}
 
-	public function render_tours($cond=''){
+	public function render_services($cond=''){
 	
-		$tours = $this->get_tours($cond);
+		$services = $this->get_services($cond);
 		
 		$html = '';
 		
-		for($i = 0;$i < $tours['count']; $i++){
-			$html .= '<div class"tour">';
-			$html .= '<div class="row">' . $tours[$i]['tourname'] . '</div>';
-			$html .= '<div class="row">' . $tours[$i]['short_description'] . '</div>';
-			$html .= '<div class="row">' . $tours[$i]['long_description'] . '</div>';
-			$html .= '<div class="row">' . $this->category_name_by_id($tours[$i]['category_id']) . '</div>';
-			$html .= '<div class="row">' . ($tours[$i]['duration'] / 60) . ' óra</div>';
-			$html .= '<div class="row">' . $this->guide_name_by_id($tours[$i]['guide_id']) . '</div>';
+		for($i = 0;$i < $services['count']; $i++){
+			$html .= '<div class"service">';
+			$html .= '<div class="row">' . $services[$i]['service_name'] . '</div>';
+			$html .= '<div class="row">' . $services[$i]['short_description'] . '</div>';
+			$html .= '<div class="row">' . $services[$i]['long_description'] . '</div>';
+			$html .= '<div class="row">' . $this->category_name_by_id($services[$i]['category_id']) . '</div>';
+			$html .= '<div class="row">' . ($services[$i]['duration'] / 60) . ' óra</div>';
+			$html .= '<div class="row">' . $this->provider_name_by_id($services[$i]['provider_id']) . '</div>';
 			
-			$photos = $this->render_tour_photos($tours[$i]['id'],TRUE);
+			$photos = $this->render_service_photos($services[$i]['id'],TRUE);
 			
 			if($photos != ''){
 				$html .= '<div class="row">' . $photos . '</div>';
 			}
 			
-			if($tours[$i]['guide_id'] == $_SESSION['guide_id']){
-				$html .= '<div class="row"><a href="edit_tour.php?tour_id=' . $tours[$i]['id'] . '">Edit</a></div>';
+			if($services[$i]['provider_id'] == $_SESSION['provider_id']){
+				$html .= '<div class="row"><a href="edit_service.php?service_id=' . $services[$i]['id'] . '">Edit</a></div>';
 			}
 			
 			$html .= '<br /><br />';
@@ -397,27 +426,27 @@ class admin extends db{
 	
 	}
 	
-	public function render_my_tours(){
+	public function render_my_services(){
 	
-		$cond['guide_id'] = $_SESSION['guide_id'];
-		return $this->render_tours($cond);
-	
-	}
-	
-	public function render_all_tours(){
-	
-		return $this->render_tours();
+		$cond['provider_id'] = $_SESSION['provider_id'];
+		return $this->render_services($cond);
 	
 	}
 	
-	public function render_tour_photos($tour_id,$return=FALSE){
+	public function render_all_services(){
 	
-		$photos = $this->get_tour_photos($tour_id);
+		return $this->render_services();
+	
+	}
+	
+	public function render_service_photos($service_id,$return=FALSE){
+	
+		$photos = $this->get_service_photos($service_id);
 		$html = '';
 		
 		for($i=0;$i<$photos['count'];$i++){
 		
-			$html .= '<img src="uploads/tours_thumbnail/' . $photos[$i]['photo'] . '" />';
+			$html .= '<img src="uploads/services_thumbnail/' . $photos[$i]['photo'] . '" />';
 		
 		}
 		
@@ -429,25 +458,25 @@ class admin extends db{
 	
 	}
 	
-	public function render_edit_guide_form(){
+	public function render_edit_provider_form(){
 	
-		$cond['id'] = $_SESSION['guide_id'];
-		$guide = $this->get_guide($cond);
+		$cond['id'] = $_SESSION['provider_id'];
+		$provider = $this->get_provider($cond);
 		
 		$html = '';
 	
-		$html .= '<input type="hidden" name="action" id="action" value="edit_guide" />';
+		$html .= '<input type="hidden" name="action" id="action" value="edit_provider" />';
 		$html .= '<div class="row">';
-		$html .= '<label for="name">Név</label><input type="text" id="name" name="name" value="' . $guide[0]['name'] . '"/><span style="display:none;" class="error">Hiba!</span>';
+		$html .= '<label for="name">Név</label><input type="text" id="name" name="name" value="' . $provider[0]['name'] . '"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
-		$html .= '<label for="description">Leírás</label><textarea id="description" name="description">' . $guide[0]['description'] . '</textarea><span style="display:none;" class="error">Hiba!</span>';
+		$html .= '<label for="description">Leírás</label><textarea id="description" name="description">' . $provider[0]['description'] . '</textarea><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
-		$html .= '<label for="email">E-mail</label><input type="text" id="email" name="email" value="' . $guide[0]['email'] . '"/><span style="display:none;" class="error">Hiba!</span>';
+		$html .= '<label for="email">E-mail</label><input type="text" id="email" name="email" value="' . $provider[0]['email'] . '"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
-		$html .= '<label for="phone">Telefon</label><input type="text" id="phone" name="phone" value="' . $guide[0]['phone'] . '"/><span style="display:none;" class="error">Hiba!</span>';
+		$html .= '<label for="phone">Telefon</label><input type="text" id="phone" name="phone" value="' . $provider[0]['phone'] . '"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
 		$html .= '<label for="old_password">Régi jelszó</label><input type="text" id="old_password" name="old_password" /><span style="display:none;" class="error">Hiba!</span>';
@@ -462,10 +491,10 @@ class admin extends db{
 		$html .= '<label for="photo">Fotó</label><input type="file" id="photo" name="photo" />';
 		$html .= '</div>';
 		
-		if($guide[0]['photo'] != '' && is_file('uploads/guide_profile_thumbnail/' . $guide[0]['photo'])){
+		if($provider[0]['photo'] != '' && is_file('uploads/provider_profile_thumbnail/' . $provider[0]['photo'])){
 		
 			$html .= '<div class="row">';
-			$html .= '<img src="uploads/guide_profile_thumbnail/' . $guide[0]['photo'] . '" />';
+			$html .= '<img src="uploads/provider_profile_thumbnail/' . $provider[0]['photo'] . '" />';
 			$html .= '</div>';
 		
 		}
@@ -474,12 +503,12 @@ class admin extends db{
 	
 	}
 
-	public function render_edit_tour_form($tour_id){
+	public function render_edit_service_form($service_id){
 	
-		$cond['id'] = $tour_id;
-		$tour = $this->get_tours($cond);
+		$cond['id'] = $service_id;
+		$service = $this->get_services($cond);
 	
-		if($tour[0]['guide_id'] != $_SESSION['guide_id']){
+		if($service[0]['provider_id'] != $_SESSION['provider_id']){
 			echo 'Nem jogosult';
 			return FALSE;
 		}
@@ -487,22 +516,22 @@ class admin extends db{
 		$html = '';
 		
 		$html .= '<form action="lib/php/admin_process.php" method="POST">';
-		$html .= '<input type="hidden" name="action" id="action" value="edit_tour" />';
-		$html .= '<input type="hidden" name="id" id="id" value="' . $tour[0]['id'] . '" />';
+		$html .= '<input type="hidden" name="action" id="action" value="edit_service" />';
+		$html .= '<input type="hidden" name="id" id="id" value="' . $service[0]['id'] . '" />';
 		$html .= '<div class="row">';
-		$html .= '<label for="tourname">Név</label><input type="text" value="' . $tour[0]['tourname'] . '" id="tourname" name="tourname"/><span style="display:none;" class="error">Hiba!</span>';
+		$html .= '<label for="servicename">Név</label><input type="text" value="' . $service[0]['servicename'] . '" id="servicename" name="servicename"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
-		$html .= '<label for="short_description">Rövid leírás</label><textarea id="short_description" name="short_description">' . $tour[0]['short_description'] . '</textarea><span style="display:none;" class="error">Hiba!</span>';
+		$html .= '<label for="short_description">Rövid leírás</label><textarea id="short_description" name="short_description">' . $service[0]['short_description'] . '</textarea><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
-		$html .= '<label for="long_description">Hosszú leírás</label><textarea id="long_description" name="long_description">' . $tour[0]['long_description'] . '</textarea><span style="display:none;" class="error">Hiba!</span>';
+		$html .= '<label for="long_description">Hosszú leírás</label><textarea id="long_description" name="long_description">' . $service[0]['long_description'] . '</textarea><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
-		$html .= '<label for="category_id">Kategória</label><select id="category_id" name="category_id">' . $this->render_categories_option($tour[0]['category_id'],TRUE) . '</select>';
+		$html .= '<label for="category_id">Kategória</label><select id="category_id" name="category_id">' . $this->render_categories_option($service[0]['category_id'],TRUE) . '</select>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
-		$html .= '<label for="duration">Hossza</label><select id="duration" name="duration">' . $this->render_duration_option($tour[0]['duration'],TRUE) . '</select>';
+		$html .= '<label for="duration">Hossza</label><select id="duration" name="duration">' . $this->render_duration_option($service[0]['duration'],TRUE) . '</select>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
 		$html .= '<input type="submit" value="Elküld" />';
@@ -510,26 +539,26 @@ class admin extends db{
 		$html .= '</form>';
 
 		$html .= '<form action="lib/php/admin_process.php" method="POST">';
-		$html .= '<input type="hidden" name="action" id="action" value="delete_tour" />';
-		$html .= '<input type="hidden" name="tour_id" id="tour_id" value="' . $tour[0]['id'] . '" />';
+		$html .= '<input type="hidden" name="action" id="action" value="delete_service" />';
+		$html .= '<input type="hidden" name="service_id" id="service_id" value="' . $service[0]['id'] . '" />';
 		$html .= '<div class="row">';
 		$html .= '<input type="submit" value="Töröl" />';
 		$html .= '</div>';
 		$html .= '</form>';
 		
-		$html .= $this->render_tour_photos($tour[0]['id'],TRUE);
+		$html .= $this->render_service_photos($service[0]['id'],TRUE);
 		
 		echo $html;
 	
 	}
 
-	public function render_tour_photo_form($tour_id){
+	public function render_service_photo_form($service_id){
 	
 		$html = '';
 	
 		$html .= '<form enctype="multipart/form-data" action="lib/php/admin_process.php" method="POST">';
-		$html .= '<input type="hidden" name="action" id="action" value="add_tour_photo" />';
-		$html .= '<input type="hidden" name="tour_id" id="tour_id" value="' . $tour_id . '" />';
+		$html .= '<input type="hidden" name="action" id="action" value="add_service_photo" />';
+		$html .= '<input type="hidden" name="service_id" id="service_id" value="' . $service_id . '" />';
 		$html .= '<div class="row">';
 		$html .= '<label for="photo">Fotó</label><input type="file" id="photo" name="photo" />';
 		$html .= '</div>';
@@ -552,22 +581,22 @@ class admin extends db{
 		return $category[0]['category_name'];
 	}
 
-	protected function guide_name_by_id($id){
+	protected function provider_name_by_id($id){
 	
 		$cond['id'] = $id;
-		$guide = $this->get_guide($cond);
+		$provider = $this->get_provider($cond);
 	
-		return $guide[0]['name'];
+		return $provider[0]['name'];
 		
 	}
 
-	protected function is_guides_tour($tour_id,$guide_id){
+	protected function is_providers_service($service_id,$provider_id){
 	
-		$cond['id'] = $tour_id;
-		$cond['guide_id'] = $guide_id;
-		$tour = $this->get_tours($cond);
+		$cond['id'] = $service_id;
+		$cond['provider_id'] = $provider_id;
+		$service = $this->get_services($cond);
 		
-		if($tour['count'] == 1){
+		if($service['count'] == 1){
 			return TRUE;
 		}else{
 			return FALSE;
@@ -592,19 +621,3 @@ class admin extends db{
 }
 
 ?>
-
-
-
-$rules = array(
-			'tagsagi_szam'    => 'required|alpha_numeric|exact_len,10',
-			'e_mail'       => 'required|valid_email'
-		);
-		
-		$filters = array(
-			'tagsagi_szam' 	  => 'trim|sanitize_string',
-			'e_mail'    	  => 'trim|sanitize_email'
-		);
-		
-		$adatok = GUMP::filter($adatok, $filters);
-
-		$validate = GUMP::validate($adatok, $rules);

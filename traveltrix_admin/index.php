@@ -2,14 +2,15 @@
 	header("Content-Type: text/html; charset=utf-8");
 	session_start();
 	
-	if(!isset($_SESSION['guide_id'])){
+	if(!isset($_SESSION['provider_id'])){
 		header("Location: login.php");
 	}
 	
 	error_reporting(E_ALL);
 	
 	include 'lib/php/class.db.php';
-	include 'lib/php/class.admin.php';	
+	include 'lib/php/class.admin.php';
+	include 'lib/ext/Wixel/gump.class.php';		
 	$main = new admin();
 	
 ?>
@@ -21,20 +22,20 @@
 <header>
 	<nav>
 		<ul>
-			<li id="invite_guide">
+			<li id="invite_provider">
 				<a href="#">Invite!</a>
 			</li>
-			<li id="edit_guide">
+			<li id="edit_provider">
 				<a href="#">Edit profile</a>
 			</li>
-			<li id="insert_tour">
-				<a href="#">Add tour</a>
+			<li id="insert_service">
+				<a href="#">Add service</a>
 			</li>
-			<li id="my_tours">
-				<a href="#">My tours</a>
+			<li id="my_services">
+				<a href="#">My services</a>
 			</li>
-			<li id="all_tours">
-				<a href="#">All tour</a>
+			<li id="all_services">
+				<a href="#">All services</a>
 			</li>
 			<li id="logout">
 				<a href="logout.php">Logout</a>
@@ -43,15 +44,15 @@
 	</nav>
 </header>
 <hr />
-<div id="inviteGuide">
-	<p>Guide meghívás</p>
+<div id="inviteProvider">
+	<p>Provider meghívás</p>
 	<form action="lib/php/admin_process.php" method="POST">
-		<input type="hidden" name="action" id="action" value="invite_guide" />
+		<input type="hidden" name="action" id="action" value="invite_provider" />
 		<div class="row">
-			<label for="inviteGuideName">Név</label><input type="text" id="inviteGuideName" name="inviteGuideName"/><span style="display:none;" class="error">Hiba!</span>
+			<label for="inviteProviderName">Név</label><input type="text" id="inviteProviderName" name="inviteProviderName"/><span style="display:none;" class="error">Hiba!</span>
 		</div>
 		<div class="row">
-			<label for="inviteGuideEmail">Email</label><input type="text" id="inviteGuideEmail" name="inviteGuideEmail"/><span style="display:none;" class="error">Hiba!</span>
+			<label for="inviteProviderEmail">Email</label><input type="text" id="inviteProviderEmail" name="inviteProviderEmail"/><span style="display:none;" class="error">Hiba!</span>
 		</div>
 		<div class="row">
 			<input type="submit" value="Elküld" />
@@ -59,10 +60,10 @@
 	</form>
 </div>
 <hr />
-<div id="editGuide">
+<div id="editProvider">
 	<p>Adataim</p>
 	<form enctype="multipart/form-data" action="lib/php/admin_process.php" method="POST">
-		<?php $main->render_edit_guide_form(); ?>
+		<?php $main->render_edit_provider_form(); ?>
 		<div class="row">
 			<input type="submit" value="Elküld" />
 		</div>
@@ -72,9 +73,9 @@
 <div id="insertTour">
 	<p>Túra hozzáadása</p>
 	<form action="lib/php/admin_process.php" method="POST">
-		<input type="hidden" name="action" id="action" value="add_tour" />
+		<input type="hidden" name="action" id="action" value="add_service" />
 		<div class="row">
-			<label for="tourname">Név</label><input type="text" id="tourname" name="tourname"/><span style="display:none;" class="error">Hiba!</span>
+			<label for="servicename">Név</label><input type="text" id="servicename" name="servicename"/><span style="display:none;" class="error">Hiba!</span>
 		</div>
 		<div class="row">
 			<label for="short_description">Rövid leírás</label><textarea id="short_description" name="short_description"></textarea><span style="display:none;" class="error">Hiba!</span>
@@ -96,12 +97,12 @@
 <hr />
 <div id="myTours">
 	<p>Túráim</p>
-	<?php $main->render_my_tours(); ?>
+	<?php $main->render_my_services(); ?>
 </div>
 <hr />
 <div id="allTours">
 	<p>Összes túra</p>
-	<?php $main->render_all_tours(); ?>
+	<?php $main->render_all_services(); ?>
 </div>
 </body>
 </html>
