@@ -58,6 +58,27 @@ class admin extends db{
 	
 	}
 	
+	public function get_guides_tour($tour_id='',$guide_id=''){
+	
+		if($tour_id == '' && $guide_id == ''){
+			return FALSE;
+		}
+	
+		$table = 'guide_to_tour';
+		$col = 'id,guide_id,service_id';
+		
+		if($tour_id != ''){
+			$cond['service_id'] = (int)$tour_id;
+		}
+		
+		if($guide_id != ''){
+			$cond['guide_id'] = (int)$guide_id;
+		}
+		
+		return $this->sql_select($table,$col,$cond);
+	
+	}
+	
 	//INSERT
 	
 	public function insert_provider($params){
@@ -169,6 +190,37 @@ class admin extends db{
 		$params = GUMP::sanitize($params);
 		
 		return $this->sql_insert('service_photos',$params);
+	}
+	
+	public function insert_guide_to_tour($guide_id,$tour_id){
+	
+		$params['guide_id'] = (int)$guide_id;
+		$params['service_id'] = (int)$tour_id;
+	
+		$params = GUMP::sanitize($params);
+		
+		$filters = array(
+			'guide_id'       => 'trim|sanitize_numbers_only',
+			'service_id'       => 'trim|sanitize_numbers_only'
+		);
+		
+		$rules = array(
+			'guide_id'       => 'required|numeric',
+			'service_id'       => 'required|numeric'
+		);
+		
+		$params = GUMP::filter($params, $filters);
+
+		$validate = GUMP::validate($params, $rules);
+		
+		//Validálás vége
+		
+		if($validate === TRUE){
+			return $this->sql_insert('guide_to_tour',$params);
+		}else{
+			print_r($validate);
+		}
+	
 	}
 	
 	//UPDATE
@@ -351,6 +403,14 @@ class admin extends db{
 	
 	}
 
+	public function delete_guide_to_tour($guide_id,$tour_id){
+	
+		$cond['guide_id'] = (int)$guide_id;
+		$cond['service_id'] = (int)$tour_id;
+	
+		return $this->sql_delete('guide_to_tour',$cond);
+	
+	}
 	
 	//RENDER
 	
@@ -417,6 +477,14 @@ class admin extends db{
 			
 			if($photos != ''){
 				$html .= '<div class="row">' . $photos . '</div>';
+			}
+			
+			if($_SESSION['is_guide'] == 1 && $services[$i]['is_tour'] == 1){
+				if($this->guiding_tour($services[$i]['id'])){
+					$html .= '<div class="row"><a href="lib/php/guide_tour.php?action=drop&service_id=' . $services[$i]['id'] . '">Inkább nem vinném</a></div>';
+				}else{
+					$html .= '<div class="row"><a href="lib/php/guide_tour.php?action=add&service_id=' . $services[$i]['id'] . '">ÉnIsÉnIs</a></div>';
+				}
 			}
 			
 			if($services[$i]['provider_id'] == $_SESSION['provider_id']){
@@ -610,6 +678,20 @@ class admin extends db{
 		$service = $this->get_services($cond);
 		
 		if($service['count'] == 1){
+			return TRUE;
+		}else{
+			return FALSE;
+		}
+	
+	}
+
+	protected function guiding_tour($tour_id){
+	
+		$tour_id = (int)$tour_id;
+		
+		$guiding = $this->get_guides_tour($tour_id,$_SESSION['provider_id']);
+		
+		if($guiding['count'] == 1){
 			return TRUE;
 		}else{
 			return FALSE;
