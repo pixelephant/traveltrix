@@ -479,7 +479,7 @@ class admin extends db{
 				$html .= '<div class="row">' . $photos . '</div>';
 			}
 			
-			if($_SESSION['is_guide'] == 1 && $services[$i]['is_tour'] == 1){
+			if($_SESSION['is_guide'] == 1 && $services[$i]['is_tour'] == 1 && $services[$i]['provider_id'] != $_SESSION['provider_id']){
 				if($this->guiding_tour($services[$i]['id'])){
 					$html .= '<div class="row"><a href="lib/php/guide_tour.php?action=drop&service_id=' . $services[$i]['id'] . '">Inkább nem vinném</a></div>';
 				}else{
