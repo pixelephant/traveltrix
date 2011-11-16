@@ -9,6 +9,10 @@ class admin extends db{
 	//SELECT
 	
 	public function get_guide($cond=''){
+
+		if($cond != ''){
+			$cond = GUMP::sanitize($cond);
+		}
 		
 		$table = 'guides';
 		$col = 'id,password,name,description,email,phone,referal_id,photo,updated_at';
@@ -19,6 +23,10 @@ class admin extends db{
 	
 	protected function get_categories($cond=''){
 		
+		if($cond != ''){
+			$cond = GUMP::sanitize($cond);
+		}
+	
 		$table = 'categories';
 		$col = 'id,category_name';
 		
@@ -27,6 +35,10 @@ class admin extends db{
 	}
 	
 	public function get_tours($cond=''){
+	
+		if($cond != ''){
+			$cond = GUMP::sanitize($cond);
+		}
 	
 		$table = 'tours';
 		$col = 'id,tourname,short_description,long_description,category_id,duration,guide_id,updated_at';
@@ -40,7 +52,7 @@ class admin extends db{
 		$table = 'tour_photos';
 		$col = 'tour_id,photo';
 		
-		$cond['tour_id'] = $tour_id;
+		$cond['tour_id'] = (int)$tour_id;
 		
 		return $this->sql_select($table,$col,$cond);
 	
@@ -54,12 +66,37 @@ class admin extends db{
 			return FALSE;
 		}
 	
+		$params = GUMP::sanitize($parms);		
+		
+		$filters = array(
+			'password'    => 'trim|sanitize_string',
+			'name'       => 'trim|sanitize_string',
+			'description'       => 'trim|sanitize_string',
+			'email'    	  => 'trim|sanitize_email',
+			'phone'       => 'trim|sanitize_numbers_only',
+			'referal_id'       => 'trim|sanitize_numbers_only',
+			'photo'       => 'trim|sanitize_string'
+		);
+		
+		$rules = array(
+			'password'    => 'required|alpha_numeric',
+			'name'       => 'required|alpha_dash',
+			'email'       => 'required|valid_email',
+			'phone'       => 'numeric',
+			'referal_id'       => 'required|numeric',
+			'photo'       => 'valid_email'
+		);
+		
+		$data = GUMP::filter($data, $filters);
+
+		$validate = GUMP::validate($data, $rules);
+		
 		//Validálás vége
 		
-		if($this->sql_insert('guides',$params)){
-			return 'Sikeres';
+		if($validate === TRUE){
+			return $this->sql_insert('guides',$params);
 		}else{
-			return 'Sikertelen';
+			return $validate;
 		}
 	}
 
@@ -79,45 +116,126 @@ class admin extends db{
 			return FALSE;
 		}
 	
+		$params = GUMP::sanitize($parms);		
+		
+		$filters = array(
+			'tourname'    => 'trim|sanitize_string',
+			'short_description'       => 'trim|sanitize_string',
+			'long_description'       => 'trim|sanitize_string',
+			'category_id'    	  => 'trim|sanitize_numbers_only',
+			'duration'       => 'trim|sanitize_numbers_only',
+			'guide_id'       => 'trim|sanitize_numbers_only'
+		);
+		
+		$rules = array(
+			'tourname'    => 'required',
+			'short_description'       => 'required',
+			'long_description'       => 'required',
+			'category_id'    	  => 'required|numeric',
+			'duration'       => 'required|numeric',
+			'guide_id'       => 'required|numeric'
+		);
+		
+		$data = GUMP::filter($data, $filters);
+
+		$validate = GUMP::validate($data, $rules);
+		
 		//Validálás vége
 		
-		if($this->sql_insert('tours',$params)){
-			return 'Sikeres';
+		if($validate === TRUE){
+			return $this->sql_insert('tours',$params);
 		}else{
-			return 'Sikertelen';
+			return $validate;
 		}
 	}
 	
 	public function insert_tour_photo($tour_id,$photo){
 	
-		$params['tour_id'] = $tour_id;
+		$params['tour_id'] = (int)$tour_id;
 		$params['photo'] = $photo;
 	
-		if($this->sql_insert('tour_photos',$params)){
-			return 'Sikeres';
-		}else{
-			return 'Sikertelen';
-		}
-	
+		$params = GUMP::sanitize($parms);
+		
+		return $this->sql_insert('tour_photos',$params)
 	}
 	
 	//UPDATE
 	
-	public function update_guide($adat_array,$cond=''){
+	public function update_guide($data_array,$cond=''){
 
-		if($this->sql_update('guides',$adat_array,$cond)){
-			return 'Sikeres';
+		$cond = GUMP::sanitize($cond);
+		$data_array = GUMP::sanitize($data_array);		
+		
+		$filters = array(
+			'password'    => 'trim|sanitize_string',
+			'name'       => 'trim|sanitize_string',
+			'description' => 'trim|sanitize_string',
+			'email'    	  => 'trim|sanitize_email',
+			'phone'       => 'trim|sanitize_numbers_only',
+			'referal_id'  => 'trim|sanitize_numbers_only',
+			'photo'       => 'trim|sanitize_string'
+		);
+		
+		$rules = array(
+			'password'    => 'alpha_numeric',
+			'name'       => 'alpha_dash',
+			'email'       => 'valid_email',
+			'phone'       => 'numeric',
+			'referal_id'  => 'numeric',
+		);
+		
+		$data_array = GUMP::filter($data_array, $filters);
+		$cond = GUMP::filter($cond, $filters);
+
+		$validate = GUMP::validate($data_array, $rules);
+		$validate2 = GUMP::validate($cond, $rules);
+		
+		//Validálás vége
+		
+		if($validate === TRUE && $validate2 === TRUE){
+			return $this->sql_update('guides',$data_array,$cond);
 		}else{
-			return 'Sikertelen';
+			return $validate . $validate2;
 		}
+			
 	}
 	
-	public function update_tour($adat_array,$cond=''){
+	public function update_tour($data_array,$cond=''){
+		
+		if(!is_array($params)){
+			return FALSE;
+		}
+	
+		$params = GUMP::sanitize($parms);		
+		
+		$filters = array(
+			'tourname'    => 'trim|sanitize_string',
+			'short_description'       => 'trim|sanitize_string',
+			'long_description'       => 'trim|sanitize_string',
+			'category_id'    	  => 'trim|sanitize_numbers_only',
+			'duration'       => 'trim|sanitize_numbers_only',
+			'guide_id'       => 'trim|sanitize_numbers_only'
+		);
+		
+		$rules = array(
+			'tourname'    => 'required',
+			'short_description'       => 'required',
+			'long_description'       => 'required',
+			'category_id'    	  => 'required|numeric',
+			'duration'       => 'required|numeric',
+			'guide_id'       => 'required|numeric'
+		);
+		
+		$adatok = GUMP::filter($adatok, $filters);
 
-		if($this->sql_update('tours',$adat_array,$cond)){
-			return 'Sikeres';
+		$validate = GUMP::validate($adatok, $rules);
+		
+		//Validálás vége
+		
+		if($validate === TRUE){
+			return $this->sql_update('tours',$data_array,$cond);
 		}else{
-			return 'Sikertelen';
+			return $validate;
 		}
 	}
 	
@@ -136,14 +254,40 @@ class admin extends db{
 	
 	public function delete_guide($cond=''){
 	
-		if(!is_array($cond) && $cond != ''){
+		if(!is_array($cond)){
 			return FALSE;
 		}
 		
-		if($this->sql_delete('guides',$cond)){
-			return 'Sikeres';
+		$cond = GUMP::sanitize($cond);
+		
+		$filters = array(
+			'password'    => 'trim|sanitize_string',
+			'name'       => 'trim|sanitize_string',
+			'description' => 'trim|sanitize_string',
+			'email'    	  => 'trim|sanitize_email',
+			'phone'       => 'trim|sanitize_numbers_only',
+			'referal_id'  => 'trim|sanitize_numbers_only',
+			'photo'       => 'trim|sanitize_string'
+		);
+		
+		$rules = array(
+			'password'    => 'alpha_numeric',
+			'name'       => 'alpha_dash',
+			'email'       => 'valid_email',
+			'phone'       => 'numeric',
+			'referal_id'  => 'numeric',
+		);
+		
+		$cond = GUMP::filter($cond, $filters);
+
+		$validate = GUMP::validate($cond, $rules);
+		
+		//Validálás vége
+		
+		if($validate === TRUE){
+			return $this->sql_delete('guides',$cond);
 		}else{
-			return 'Sikertelen';
+			return $validate;
 		}	
 		
 	}	
@@ -151,7 +295,7 @@ class admin extends db{
 	public function delete_guide_photo($guide_id){
 	
 		$data['photo'] = '';
-		$cond['id'] = $guide_id;
+		$cond['id'] = (int)$guide_id;
 		
 		return $this->update_guide($data,$cond);
 	
@@ -159,27 +303,19 @@ class admin extends db{
 
 	public function delete_tour($tour_id){
 	
-		$cond['guide_id'] = $_SESSION['guide_id'];
-		$cond['id'] = $tour_id;
+		$cond['guide_id'] = (int)$_SESSION['guide_id'];
+		$cond['id'] = (int)$tour_id;
 	
-		if($this->sql_delete('tours',$cond)){
-			return TRUE;
-		}else{
-			return 'Sikertelen';
-		}
+		return $this->sql_delete('tours',$cond);
 	
 	}
 	
 	public function delete_tour_photo($photo,$tour_id){
 	
 		$cond['photo'] = $photo;
-		$cond['tour_id'] = $tour_id;
+		$cond['tour_id'] = (int)$tour_id;
 	
-		if($this->sql_delete('tour_photos',$cond)){
-			return TRUE;
-		}else{
-			return 'Sikertelen';
-		}	
+		return $this->sql_delete('tour_photos',$cond);
 	
 	}
 
@@ -456,3 +592,19 @@ class admin extends db{
 }
 
 ?>
+
+
+
+$rules = array(
+			'tagsagi_szam'    => 'required|alpha_numeric|exact_len,10',
+			'e_mail'       => 'required|valid_email'
+		);
+		
+		$filters = array(
+			'tagsagi_szam' 	  => 'trim|sanitize_string',
+			'e_mail'    	  => 'trim|sanitize_email'
+		);
+		
+		$adatok = GUMP::filter($adatok, $filters);
+
+		$validate = GUMP::validate($adatok, $rules);

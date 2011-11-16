@@ -5,6 +5,7 @@ ob_start();
 include 'config.php';
 include 'class.db.php';
 include 'class.admin.php';
+include '../ext/Wixel/gump.class.php';
 
 $main = new admin(true);
 
