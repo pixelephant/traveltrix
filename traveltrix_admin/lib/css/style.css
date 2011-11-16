@@ -1,25 +1,25 @@
-#inviteGuide input{
+#inviteProvider input{
 	position: absolute;
 	left: 70px;
 }
 
-#editGuide input{
+#editProvider input{
 	position: absolute;
 	left: 120px;		
 }
 
-#editGuide textarea{
+#editProvider textarea{
 	margin-left: 65px;
 	height: 100px;
 	width: 500px;		
 }
 
-#insertTour input, select,#editTour input, select{
+#insertService input, select,#editService input, select{
 	position: absolute;
 	left: 120px;
 }
 
-#insertTour textarea,#editTour textarea{
+#insertService textarea,#editService textarea{
 	margin-left: 15px;
 	height: 100px;
 	width: 500px;		

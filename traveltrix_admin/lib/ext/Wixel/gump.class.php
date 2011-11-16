@@ -630,7 +630,7 @@ class GUMP
 			return;
 		}
 		
-		if(!preg_match("/^([-a-ű0-9_-])+$/i", $input[$field]) !== FALSE)
+		if(!preg_match("/^([-a-ű0-9_-\s])+$/i", $input[$field]) !== FALSE)
 		{
 			return array(
 				'field' => $field,

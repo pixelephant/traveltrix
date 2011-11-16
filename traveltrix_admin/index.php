@@ -45,7 +45,7 @@
 </header>
 <hr />
 <div id="inviteProvider">
-	<p>Provider meghívás</p>
+	<p>Szolgáltató meghívás</p>
 	<form action="lib/php/admin_process.php" method="POST">
 		<input type="hidden" name="action" id="action" value="invite_provider" />
 		<div class="row">
@@ -53,6 +53,9 @@
 		</div>
 		<div class="row">
 			<label for="inviteProviderEmail">Email</label><input type="text" id="inviteProviderEmail" name="inviteProviderEmail"/><span style="display:none;" class="error">Hiba!</span>
+		</div>
+		<div class="row">
+			<label for="inviteProviderType">Típus</label><select id="inviteProviderType" name="inviteProviderType"><option value="1">Guide</option><option value="0">Egyéb szolgáltató</option></select>
 		</div>
 		<div class="row">
 			<input type="submit" value="Elküld" />
@@ -70,12 +73,12 @@
 	</form>
 </div>
 <hr />
-<div id="insertTour">
-	<p>Túra hozzáadása</p>
+<div id="insertService">
+	<p>Szolgáltatás hozzáadása</p>
 	<form action="lib/php/admin_process.php" method="POST">
 		<input type="hidden" name="action" id="action" value="add_service" />
 		<div class="row">
-			<label for="servicename">Név</label><input type="text" id="servicename" name="servicename"/><span style="display:none;" class="error">Hiba!</span>
+			<label for="service_name">Név</label><input type="text" id="service_name" name="service_name"/><span style="display:none;" class="error">Hiba!</span>
 		</div>
 		<div class="row">
 			<label for="short_description">Rövid leírás</label><textarea id="short_description" name="short_description"></textarea><span style="display:none;" class="error">Hiba!</span>
@@ -90,18 +93,21 @@
 			<label for="duration">Hossza</label><select id="duration" name="duration"><?php $main->render_duration_option(); ?></select>
 		</div>
 		<div class="row">
+			<label for="price">Ár</label><input type="text" id="price" name="price"/> / fő<span style="display:none;" class="error">Hiba!</span>
+		</div>
+		<div class="row">
 			<input type="submit" value="Elküld" />
 		</div>
 	</form>
 </div>
 <hr />
-<div id="myTours">
-	<p>Túráim</p>
+<div id="myServices">
+	<p>Szolgáltatásaim</p>
 	<?php $main->render_my_services(); ?>
 </div>
 <hr />
-<div id="allTours">
-	<p>Összes túra</p>
+<div id="allServices">
+	<p>Összes szolgáltatás</p>
 	<?php $main->render_all_services(); ?>
 </div>
 </body>

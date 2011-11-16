@@ -66,7 +66,7 @@ class admin extends db{
 			return FALSE;
 		}
 	
-		$params = GUMP::sanitize($parms);		
+		$params = GUMP::sanitize($params);
 		
 		$filters = array(
 			'password'    => 'trim|sanitize_string',
@@ -93,24 +93,26 @@ class admin extends db{
 			'photo'       => 'valid_email'
 		);
 		
-		$data = GUMP::filter($data, $filters);
+		$params = GUMP::filter($params, $filters);
 
-		$validate = GUMP::validate($data, $rules);
+		$validate = GUMP::validate($params, $rules);
 		
 		//Validálás vége
 		
 		if($validate === TRUE){
 			return $this->sql_insert('providers',$params);
 		}else{
-			return $validate;
+			print_r($validate);
 		}
 	}
 
-	public function invite_provider($name,$email,$password){
+	public function invite_provider($name,$email,$password,$is_guide){
 	
 		$params['name'] = $name;
 		$params['email'] = $email;
 		$params['password'] = $password;
+		$params['is_guide'] = $is_guide;
+		$params['referal_id'] = $_SESSION['provider_id'];
 	
 		return $this->insert_provider($params);
 	
@@ -122,7 +124,7 @@ class admin extends db{
 			return FALSE;
 		}
 	
-		$params = GUMP::sanitize($parms);		
+		$params = GUMP::sanitize($params);		
 		
 		$filters = array(
 			'service_name'    => 'trim|sanitize_string',
@@ -155,7 +157,7 @@ class admin extends db{
 		if($validate === TRUE){
 			return $this->sql_insert('services',$params);
 		}else{
-			return $validate;
+			print_r($validate);
 		}
 	}
 	
@@ -164,7 +166,7 @@ class admin extends db{
 		$params['service_id'] = (int)$service_id;
 		$params['photo'] = $photo;
 	
-		$params = GUMP::sanitize($parms);
+		$params = GUMP::sanitize($params);
 		
 		return $this->sql_insert('service_photos',$params);
 	}
@@ -195,10 +197,9 @@ class admin extends db{
 			'email'       => 'valid_email',
 			'phone'       => 'numeric',
 			'address'       => 'alpha_dash',
-			'website'       => 'alpha_dash,valid_url',
+			'website'       => 'valid_url',
 			'is_guide'       => 'numeric',
 			'referal_id'       => 'numeric',
-			'photo'       => 'valid_email'
 		);
 		
 		
@@ -213,7 +214,8 @@ class admin extends db{
 		if($validate === TRUE && $validate2 === TRUE){
 			return $this->sql_update('providers',$data_array,$cond);
 		}else{
-			return $validate . $validate2;
+			print_r($validate);
+			print_r($validate2);
 		}
 			
 	}
@@ -224,7 +226,7 @@ class admin extends db{
 			return FALSE;
 		}
 	
-		$params = GUMP::sanitize($parms);		
+		$params = GUMP::sanitize($params);		
 		
 		$filters = array(
 			'service_name'    => 'trim|sanitize_string',
@@ -257,7 +259,7 @@ class admin extends db{
 		if($validate === TRUE){
 			return $this->sql_update('services',$data_array,$cond);
 		}else{
-			return $validate;
+			print_r($validate);
 		}
 	}
 	
@@ -316,7 +318,7 @@ class admin extends db{
 		if($validate === TRUE){
 			return $this->sql_delete('providers',$cond);
 		}else{
-			return $validate;
+			print_r($validate);
 		}	
 		
 	}	
@@ -477,6 +479,12 @@ class admin extends db{
 		$html .= '</div>';
 		$html .= '<div class="row">';
 		$html .= '<label for="phone">Telefon</label><input type="text" id="phone" name="phone" value="' . $provider[0]['phone'] . '"/><span style="display:none;" class="error">Hiba!</span>';
+		$html .= '</div>';
+		$html .= '<div class="row">';
+		$html .= '<label for="address">Cím</label><input type="text" id="address" name="address" value="' . $provider[0]['address'] . '"/><span style="display:none;" class="error">Hiba!</span>';
+		$html .= '</div>';
+		$html .= '<div class="row">';
+		$html .= '<label for="website">Weboldal</label><input type="text" id="website" name="website" value="' . $provider[0]['website'] . '"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
 		$html .= '<label for="old_password">Régi jelszó</label><input type="text" id="old_password" name="old_password" /><span style="display:none;" class="error">Hiba!</span>';
