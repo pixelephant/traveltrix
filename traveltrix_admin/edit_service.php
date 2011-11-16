@@ -7,10 +7,11 @@ error_reporting(E_ALL);
 include 'lib/php/config.php';
 include 'lib/php/class.db.php';
 include 'lib/php/class.admin.php';
+include 'lib/ext/Wixel/gump.class.php';
 
 $main = new admin();
 
-$tour_id = $_GET['tour_id'];
+$service_id = (int)$_GET['service_id'];
 ?>
 
 <html>
@@ -18,10 +19,10 @@ $tour_id = $_GET['tour_id'];
 <link rel="stylesheet" type="text/css" href="lib/css/style.css" />
 </head>
 <body>
-<div id="editTour">
+<div id="editService">
 	<p>Túra szerkesztése</p>
-	<?php $main->render_edit_tour_form($tour_id); ?>
-	<?php $main->render_tour_photo_form($tour_id); ?>
+	<?php $main->render_edit_service_form($service_id); ?>
+	<?php $main->render_service_photo_form($service_id); ?>
 </div>
 </body>
 </html>

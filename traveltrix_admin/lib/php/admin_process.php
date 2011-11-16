@@ -124,7 +124,8 @@
 		$data = array_filter($_POST);
 		unset($data['action']);
 		
-		$data['provider_id'] = $_SESSION['provider_id'];
+		$data['provider_id'] = (int)$_SESSION['provider_id'];
+		$data['is_tour'] = (int)$_SESSION['is_guide'];
 		
 		$action = $main->insert_service($data);
 		

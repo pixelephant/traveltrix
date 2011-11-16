@@ -148,9 +148,9 @@ class admin extends db{
 			'provider_id'       => 'required|numeric'
 		);
 		
-		$data = GUMP::filter($data, $filters);
+		$params = GUMP::filter($params, $filters);
 
-		$validate = GUMP::validate($data, $rules);
+		$validate = GUMP::validate($params, $rules);
 		
 		//Validálás vége
 		
@@ -222,11 +222,12 @@ class admin extends db{
 	
 	public function update_service($data_array,$cond=''){
 		
-		if(!is_array($params)){
+		if(!is_array($data_array)){
 			return FALSE;
 		}
 	
-		$params = GUMP::sanitize($params);		
+		$cond = GUMP::sanitize($cond);
+		$data_array = GUMP::sanitize($data_array);	
 		
 		$filters = array(
 			'service_name'    => 'trim|sanitize_string',
@@ -240,26 +241,26 @@ class admin extends db{
 		);
 		
 		$rules = array(
-			'service_name'    => 'required',
-			'short_description'       => 'required',
-			'long_description'       => 'required',
-			'category_id'    	  => 'required|numeric',
-			'duration'       => 'required|numeric',
-			'price'       => 'required|numeric',
-			'is_tour'       => 'required|numeric',
-			'provider_id'       => 'required|numeric'
+			'category_id'    	  => 'numeric',
+			'duration'       => 'numeric',
+			'price'       => 'numeric',
+			'is_tour'       => 'numeric',
+			'provider_id'       => 'numeric'
 		);
 		
-		$adatok = GUMP::filter($adatok, $filters);
+		$data_array = GUMP::filter($data_array, $filters);
+		$cond = GUMP::filter($cond, $filters);
 
-		$validate = GUMP::validate($adatok, $rules);
+		$validate = GUMP::validate($data_array, $rules);
+		$validate2 = GUMP::validate($cond, $rules);
 		
 		//Validálás vége
 		
-		if($validate === TRUE){
+		if($validate === TRUE && $validate2 === TRUE){
 			return $this->sql_update('services',$data_array,$cond);
 		}else{
 			print_r($validate);
+			print_r($validate2);
 		}
 	}
 	
@@ -410,6 +411,7 @@ class admin extends db{
 			$html .= '<div class="row">' . $this->category_name_by_id($services[$i]['category_id']) . '</div>';
 			$html .= '<div class="row">' . ($services[$i]['duration'] / 60) . ' óra</div>';
 			$html .= '<div class="row">' . $this->provider_name_by_id($services[$i]['provider_id']) . '</div>';
+			$html .= '<div class="row">' . $services[$i]['price'] . ' / fő</div>';
 			
 			$photos = $this->render_service_photos($services[$i]['id'],TRUE);
 			
@@ -527,7 +529,7 @@ class admin extends db{
 		$html .= '<input type="hidden" name="action" id="action" value="edit_service" />';
 		$html .= '<input type="hidden" name="id" id="id" value="' . $service[0]['id'] . '" />';
 		$html .= '<div class="row">';
-		$html .= '<label for="servicename">Név</label><input type="text" value="' . $service[0]['servicename'] . '" id="servicename" name="servicename"/><span style="display:none;" class="error">Hiba!</span>';
+		$html .= '<label for="service_name">Név</label><input type="text" value="' . $service[0]['service_name'] . '" id="service_name" name="service_name"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
 		$html .= '<label for="short_description">Rövid leírás</label><textarea id="short_description" name="short_description">' . $service[0]['short_description'] . '</textarea><span style="display:none;" class="error">Hiba!</span>';
@@ -540,6 +542,9 @@ class admin extends db{
 		$html .= '</div>';
 		$html .= '<div class="row">';
 		$html .= '<label for="duration">Hossza</label><select id="duration" name="duration">' . $this->render_duration_option($service[0]['duration'],TRUE) . '</select>';
+		$html .= '</div>';
+		$html .= '<div class="row">';
+		$html .= '<label for="price">Ár</label><input type="text" value="' . $service[0]['price'] . '" id="price" name="price"/> / fő<span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
 		$html .= '<div class="row">';
 		$html .= '<input type="submit" value="Elküld" />';
