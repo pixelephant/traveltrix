@@ -73,14 +73,14 @@ $("document").ready(function(){
 				e.preventDefault();
 				console.log(pos);
 				if(pos != 0){
-					$("#top-layer").fadeOut();
+					$("#top-layer,#arrows").fadeOut();
 					$("#basic-form").animate({
 						top: 0
 					});
 					$("#form-wrap").height("+=60");
 				}
 				else{
-					$("#top-layer").fadeIn();
+					$("#top-layer,#arrows").fadeIn();
 					$("#basic-form").animate({
 						top: "-60px"
 					});

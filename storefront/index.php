@@ -30,10 +30,10 @@
 	<header>
 		<nav>
 			<ul>
-				<li class="active" id="home"><a href="/">Home<span>The starting point</span></a></li>
-				<li id="blog"><a href="blog">Blog<span>Latest news</span></a></li>
-				<li id="faq"><a href="faq">FAQ<span>Get your answers here</span></a></li>
-				<li id="about"><a href="about">About<span>Who we are</span></a></li>
+				<li class="active" id="home"><a href="/">Home</a></li>
+				<li id="blog"><a href="blog">Blog</a></li>
+				<li id="faq"><a href="faq">FAQ</a></li>
+				<li id="about"><a href="about">About</a></li>
 			</ul>
 			<div id="search">
 				<form action="#" id="search-form">
@@ -59,19 +59,7 @@
 					<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="pixelephant">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 				</div>
 				<div class="link">
-					<!-- Place this tag where you want the +1 button to render -->
-					<g:plusone size="medium"></g:plusone>
-
-					<!-- Place this render call where appropriate -->
-					<script type="text/javascript">
-					  window.___gcfg = {lang: 'en-GB'};
-
-					  (function() {
-					    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-					    po.src = 'https://apis.google.com/js/plusone.js';
-					    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-					  })();
-					</script>
+					<a id="newsletter-button" href="#"><span class="icon"></span>Newsletter</a>
 				</div>
 			</div>
 	</div>
@@ -118,6 +106,7 @@
 		</section>
 		
 		<div id="form-wrap">
+			<div id="arrows"></div>
 			<form action="#" id="basic-form">
 				<h3>Plan your tour! It only takes 10 minutes.</h3>
 				<fieldset class="half" id="destination">
@@ -237,8 +226,37 @@
 		</section>
 	</div>
 	<footer>
+		
+		<div id="footer-top">
+			<div id="inner-top">
+				<h3>Contact</h3>
+				<h3>Links</h3>
+				<h3>Partners</h3>
+			</div>
+		</div>
 		<div id="footer">
-			
+			<div>
+				<h4>Tel.:</h4>
+				<p>+36-30-123-4567</p>
+				<h4>Email</h4>
+				<p><a href="mailto:hello@traveltrix.org">hello@traveltrix.org</a></p>
+				<h4>Address</h4>
+				<p>17 Kossuth str.</p>
+				<p>1112</p>
+				<p>Budapest</p>
+				<p>Hungary</p>
+			</div>
+			<div>
+				<a href="#">Are you local? Join our team!</a>
+				<a href="#">Legal terms</a>
+				<a href="#">Privacy policy</a>
+				<a href="#">Advertising</a>
+			</div>
+			<div>
+				<a href="#">index.hu</a>
+				<a href="#">pixelephant.hu</a>
+				<a href="#">nytimes.com</a>
+			</div>
 		</div>
 	</footer>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
