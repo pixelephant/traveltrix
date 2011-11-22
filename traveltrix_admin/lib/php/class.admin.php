@@ -488,7 +488,7 @@ class admin extends db{
 			}
 			
 			if($services[$i]['provider_id'] == $_SESSION['provider_id']){
-				$html .= '<div class="formrow"><a href="edit_service.php?service_id=' . $services[$i]['id'] . '">Edit</a></div>';
+				$html .= '<div class="formrow"><a href="editservice?service_id=' . $services[$i]['id'] . '">Edit</a></div>';
 			}
 			
 			$html .= '<br /><br />';
