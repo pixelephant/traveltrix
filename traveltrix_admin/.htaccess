@@ -3,7 +3,7 @@ ErrorDocument 404 /error/404.php
 
 Options +FollowSymLinks 
 RewriteEngine On
-RewriteBase /
+#RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

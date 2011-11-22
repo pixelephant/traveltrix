@@ -1,7 +1,7 @@
 <?php
 	header("Content-Type: text/html; charset=utf-8");
 	session_start();
-	$_SESSION['provider_id'] = 1;
+	$_SESSION['provider_id'] = 3;
 //	if(!isset($_SESSION['provider_id'])){
 //		header("Location: login.php");
 //	}
@@ -20,6 +20,7 @@
 	<title>Traveltrix Admin</title>
 	<link rel="stylesheet" href="lib/css/style.css" />
 	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+	<base href="http://www.pixelephant.hu/projects/on-going/traveltrix-git/traveltrix_admin/" />
 </head>
 <body>
 	<header>
@@ -36,13 +37,13 @@
 	<div id="main">
 		<nav id="main-nav">
 			<ul>
-				<li id="dashboard"><a href="/dashboard">Dashboard</a></li>
-				<li><a href="/profile">My Profile</a></li>
-				<li><a href="/services">My Services</a></li>
-				<li><a href="/allservices">All Services</a></li>
-				<li><a href="/orders">Orders</a></li>
-				<li><a href="/settings">Settings</a></li>
-				<li><a href="/invitations">Invitations</a></li>
+				<li id="dashboard"><a href="dashboard">Dashboard</a></li>
+				<li><a href="profile">My Profile</a></li>
+				<li><a href="services">My Services</a></li>
+				<li><a href="allservices">All Services</a></li>
+				<li><a href="orders">Orders</a></li>
+				<li><a href="settings">Settings</a></li>
+				<li><a href="invitations">Invitations</a></li>
 			</ul>
 			<footer id="help">
 				<h3>Need help?</h3>
