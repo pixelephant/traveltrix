@@ -2,6 +2,7 @@
 include 'lib/php/skeleton_index.php';
 include 'lib/php/class.db.php';
 include 'lib/php/class.admin.php';
+include 'lib/ext/Wixel/gump.class.php';
 
 $main = new admin();
 ?>

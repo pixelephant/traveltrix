@@ -9,10 +9,6 @@
 	error_reporting(E_ALL);
 	
 	require_once 'ti.php';
-	include 'lib/php/class.db.php';
-	include 'lib/php/class.admin.php';
-	include 'lib/ext/Wixel/gump.class.php';		
-	$main = new admin();
 	
 ?>
 
