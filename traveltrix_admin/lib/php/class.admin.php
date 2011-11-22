@@ -465,30 +465,30 @@ class admin extends db{
 		
 		for($i = 0;$i < $services['count']; $i++){
 			$html .= '<div class"service">';
-			$html .= '<div class="row">' . $services[$i]['service_name'] . '</div>';
-			$html .= '<div class="row">' . $services[$i]['short_description'] . '</div>';
-			$html .= '<div class="row">' . $services[$i]['long_description'] . '</div>';
-			$html .= '<div class="row">' . $this->category_name_by_id($services[$i]['category_id']) . '</div>';
-			$html .= '<div class="row">' . ($services[$i]['duration'] / 60) . ' óra</div>';
-			$html .= '<div class="row">' . $this->provider_name_by_id($services[$i]['provider_id']) . '</div>';
-			$html .= '<div class="row">' . $services[$i]['price'] . ' / fő</div>';
+			$html .= '<div class="formrow">' . $services[$i]['service_name'] . '</div>';
+			$html .= '<div class="formrow">' . $services[$i]['short_description'] . '</div>';
+			$html .= '<div class="formrow">' . $services[$i]['long_description'] . '</div>';
+			$html .= '<div class="formrow">' . $this->category_name_by_id($services[$i]['category_id']) . '</div>';
+			$html .= '<div class="formrow">' . ($services[$i]['duration'] / 60) . ' óra</div>';
+			$html .= '<div class="formrow">' . $this->provider_name_by_id($services[$i]['provider_id']) . '</div>';
+			$html .= '<div class="formrow">' . $services[$i]['price'] . ' / fő</div>';
 			
 			$photos = $this->render_service_photos($services[$i]['id'],TRUE);
 			
 			if($photos != ''){
-				$html .= '<div class="row">' . $photos . '</div>';
+				$html .= '<div class="formrow">' . $photos . '</div>';
 			}
 			
 			if($_SESSION['is_guide'] == 1 && $services[$i]['is_tour'] == 1 && $services[$i]['provider_id'] != $_SESSION['provider_id']){
 				if($this->guiding_tour($services[$i]['id'])){
-					$html .= '<div class="row"><a href="lib/php/guide_tour.php?action=drop&service_id=' . $services[$i]['id'] . '">Inkább nem vinném</a></div>';
+					$html .= '<div class="formrow"><a href="lib/php/guide_tour.php?action=drop&service_id=' . $services[$i]['id'] . '">Inkább nem vinném</a></div>';
 				}else{
-					$html .= '<div class="row"><a href="lib/php/guide_tour.php?action=add&service_id=' . $services[$i]['id'] . '">ÉnIsÉnIs</a></div>';
+					$html .= '<div class="formrow"><a href="lib/php/guide_tour.php?action=add&service_id=' . $services[$i]['id'] . '">ÉnIsÉnIs</a></div>';
 				}
 			}
 			
 			if($services[$i]['provider_id'] == $_SESSION['provider_id']){
-				$html .= '<div class="row"><a href="edit_service.php?service_id=' . $services[$i]['id'] . '">Edit</a></div>';
+				$html .= '<div class="formrow"><a href="edit_service.php?service_id=' . $services[$i]['id'] . '">Edit</a></div>';
 			}
 			
 			$html .= '<br /><br />';
@@ -538,40 +538,40 @@ class admin extends db{
 		$html = '';
 	
 		$html .= '<input type="hidden" name="action" id="action" value="edit_provider" />';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="name">Név</label><input type="text" id="name" name="name" value="' . $provider[0]['name'] . '"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="description">Leírás</label><textarea id="description" name="description">' . $provider[0]['description'] . '</textarea><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="email">E-mail</label><input type="text" id="email" name="email" value="' . $provider[0]['email'] . '"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="phone">Telefon</label><input type="text" id="phone" name="phone" value="' . $provider[0]['phone'] . '"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="address">Cím</label><input type="text" id="address" name="address" value="' . $provider[0]['address'] . '"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="website">Weboldal</label><input type="text" id="website" name="website" value="' . $provider[0]['website'] . '"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="old_password">Régi jelszó</label><input type="text" id="old_password" name="old_password" /><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="password">Új jelszó</label><input type="text" id="password" name="password" /><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="password_retype">Új jelszó újra</label><input type="text" id="password_retype" name="password_retype" /><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="photo">Fotó</label><input type="file" id="photo" name="photo" />';
 		$html .= '</div>';
 		
 		if($provider[0]['photo'] != '' && is_file('uploads/provider_profile_thumbnail/' . $provider[0]['photo'])){
 		
-			$html .= '<div class="row">';
+			$html .= '<div class="formrow">';
 			$html .= '<img src="uploads/provider_profile_thumbnail/' . $provider[0]['photo'] . '" />';
 			$html .= '</div>';
 		
@@ -596,34 +596,34 @@ class admin extends db{
 		$html .= '<form action="lib/php/admin_process.php" method="POST">';
 		$html .= '<input type="hidden" name="action" id="action" value="edit_service" />';
 		$html .= '<input type="hidden" name="id" id="id" value="' . $service[0]['id'] . '" />';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="service_name">Név</label><input type="text" value="' . $service[0]['service_name'] . '" id="service_name" name="service_name"/><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="short_description">Rövid leírás</label><textarea id="short_description" name="short_description">' . $service[0]['short_description'] . '</textarea><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="long_description">Hosszú leírás</label><textarea id="long_description" name="long_description">' . $service[0]['long_description'] . '</textarea><span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="category_id">Kategória</label><select id="category_id" name="category_id">' . $this->render_categories_option($service[0]['category_id'],TRUE) . '</select>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="duration">Hossza</label><select id="duration" name="duration">' . $this->render_duration_option($service[0]['duration'],TRUE) . '</select>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="price">Ár</label><input type="text" value="' . $service[0]['price'] . '" id="price" name="price"/> / fő<span style="display:none;" class="error">Hiba!</span>';
 		$html .= '</div>';
-		$html .= '<div class="row">';
-		$html .= '<input type="submit" value="Elküld" />';
+		$html .= '<div class="formrow">';
+		$html .= '<input type="submit" class="btn primary" value="Elküld" />';
 		$html .= '</div>';
 		$html .= '</form>';
 
 		$html .= '<form action="lib/php/admin_process.php" method="POST">';
 		$html .= '<input type="hidden" name="action" id="action" value="delete_service" />';
 		$html .= '<input type="hidden" name="service_id" id="service_id" value="' . $service[0]['id'] . '" />';
-		$html .= '<div class="row">';
-		$html .= '<input type="submit" value="Töröl" />';
+		$html .= '<div class="formrow">';
+		$html .= '<input type="submit" class="btn primary" value="Töröl" />';
 		$html .= '</div>';
 		$html .= '</form>';
 		
@@ -640,11 +640,11 @@ class admin extends db{
 		$html .= '<form enctype="multipart/form-data" action="lib/php/admin_process.php" method="POST">';
 		$html .= '<input type="hidden" name="action" id="action" value="add_service_photo" />';
 		$html .= '<input type="hidden" name="service_id" id="service_id" value="' . $service_id . '" />';
-		$html .= '<div class="row">';
+		$html .= '<div class="formrow">';
 		$html .= '<label for="photo">Fotó</label><input type="file" id="photo" name="photo" />';
 		$html .= '</div>';
-		$html .= '<div class="row">';
-		$html .= '<input type="submit" value="Upload image"/>';
+		$html .= '<div class="formrow">';
+		$html .= '<input type="submit" class="btn primary" value="Upload image"/>';
 		$html .= '</div>';
 		$html .= '</form>';
 		

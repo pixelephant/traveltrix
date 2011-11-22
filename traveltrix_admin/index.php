@@ -22,6 +22,7 @@
 	<meta charset="UTF-8">
 	<title>Traveltrix Admin</title>
 	<link rel="stylesheet" href="lib/css/style.css" />
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
 </head>
 <body>
 	<header>
@@ -38,79 +39,91 @@
 	<div id="main">
 		<nav id="main-nav">
 			<ul>
-				<li><a href="#">Dashboard</a></li>
-				<li><a href="#">My Profile</a></li>
-				<li><a href="#">My Toures</a></li>
-				<li><a href="#">Orders</a></li>
-				<li><a href="#">Settings</a></li>
+				<li id="dashboard"><a href="/dashboard">Dashboard</a></li>
+				<li><a href="/profile">My Profile</a></li>
+				<li><a href="/tours">My Tours</a></li>
+				<li><a href="/orders">Orders</a></li>
+				<li><a href="/settings">Settings</a></li>
+				<li><a href="/invitations">Invitations</a></li>
 			</ul>
+			<footer id="help">
+				<h3>Need help?</h3>
+				<p><a href="mailto:support@traveltrix.org">support@traveltrix.org</a></p>
+				<p>+36-20-123-4567</p>
+				<p id="copy">&copy; <?php echo date("Y") ?></p>
+			</footer>
 		</nav>
 		<div id="content">
 			<div id="content-inner">
 				<div id="inviteProvider">
-					<p>Szolgáltató meghívás</p>
+					<h2>Szolgáltató meghívás</h2>
 					<form action="lib/php/admin_process.php" method="POST">
 						<input type="hidden" name="action" id="action" value="invite_provider" />
-						<div class="row">
+						<div class="formrow">
 							<label for="inviteProviderName">Név</label><input type="text" id="inviteProviderName" name="inviteProviderName"/><span style="display:none;" class="error">Hiba!</span>
 						</div>
-						<div class="row">
-							<label for="inviteProviderEmail">Email</label><input type="text" id="inviteProviderEmail" name="inviteProviderEmail"/><span style="display:none;" class="error">Hiba!</span>
+						<div class="formrow">
+							<label for="inviteProviderEmail">Email cím</label>
+							<div class="input-prepend">
+								<span class="add-on">@</span>
+								<input type="text" id="inviteProviderEmail" name="inviteProviderEmail"/>
+							</div>
+							<span style="display:none;" class="error">Hiba!</span>
 						</div>
-						<div class="row">
+						<div class="formrow">
 							<label for="inviteProviderType">Típus</label><select id="inviteProviderType" name="inviteProviderType"><option value="1">Guide</option><option value="0">Egyéb szolgáltató</option></select>
 						</div>
-						<div class="row">
-							<input type="submit" value="Elküld" />
+						<div class="formrow">
+							<input type="submit" value="Elküld" class="btn primary" />
 						</div>
 					</form>
 				</div>
 				<hr />
 				<div id="editProvider">
-					<p>Adataim</p>
+					<h2>Adataim</h2>
 					<form enctype="multipart/form-data" action="lib/php/admin_process.php" method="POST">
 						<?php $main->render_edit_provider_form(); ?>
-						<div class="row">
-							<input type="submit" value="Elküld" />
+						<div class="formrow">
+							<input type="submit" class="btn primary" value="Elküld" />
 						</div>
 					</form>
 				</div>
 				<hr />
 				<div id="insertService">
-					<p>Szolgáltatás hozzáadása</p>
+					<h2>Szolgáltatás hozzáadása</h2>
 					<form action="lib/php/admin_process.php" method="POST">
 						<input type="hidden" name="action" id="action" value="add_service" />
-						<div class="row">
+						<div class="formrow">
 							<label for="service_name">Név</label><input type="text" id="service_name" name="service_name"/><span style="display:none;" class="error">Hiba!</span>
 						</div>
-						<div class="row">
+						<div class="formrow">
 							<label for="short_description">Rövid leírás</label><textarea id="short_description" name="short_description"></textarea><span style="display:none;" class="error">Hiba!</span>
 						</div>
-						<div class="row">
+						<div class="formrow">
 							<label for="long_description">Hosszú leírás</label><textarea id="long_description" name="long_description"></textarea><span style="display:none;" class="error">Hiba!</span>
 						</div>
-						<div class="row">
+						<div class="formrow">
 							<label for="category_id">Kategória</label><select id="category_id" name="category_id"><?php $main->render_categories_option(); ?></select>
 						</div>
-						<div class="row">
+						<div class="formrow">
 							<label for="duration">Hossza</label><select id="duration" name="duration"><?php $main->render_duration_option(); ?></select>
 						</div>
-						<div class="row">
+						<div class="formrow">
 							<label for="price">Ár</label><input type="text" id="price" name="price"/> / fő<span style="display:none;" class="error">Hiba!</span>
 						</div>
-						<div class="row">
+						<div class="formrow">
 							<input type="submit" value="Elküld" />
 						</div>
 					</form>
 				</div>
 				<hr />
 				<div id="myServices">
-					<p>Szolgáltatásaim</p>
+					<h2>Szolgáltatásaim</h2>
 					<?php $main->render_my_services(); ?>
 				</div>
 				<hr />
 				<div id="allServices">
-					<p>Összes szolgáltatás</p>
+					<h2>Összes szolgáltatás</h2>
 					<?php $main->render_all_services(); ?>
 				</div>
 			</div>
