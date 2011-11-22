@@ -1,0 +1,11 @@
+DirectoryIndex profile.php
+ErrorDocument 404 /error/404.php
+
+Options +FollowSymLinks 
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([A-Za-z0-9-]+)/?$ $1.php [L]
