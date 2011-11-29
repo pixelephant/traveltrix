@@ -19,9 +19,9 @@ if($_POST['action'] == 'login'){
 	if($user['count'] == 1){
 		$_SESSION['provider_id'] = $user[0]['id'];
 		$_SESSION['is_guide'] = $user[0]['is_guide'];
-		header("Location: " . $_siteUrl . "index.php");
+		header("Location: " . $_siteUrl);
 	}else{
-		header("Location: " . $_siteUrl . "login.php");
+		header("Location: " . $_siteUrl);
 	}
 }
 
