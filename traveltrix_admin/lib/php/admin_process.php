@@ -58,7 +58,7 @@
 		$action = $mail->Send();
 		
 		if(!$main->isAjax()){
-			header("Location: " . $_siteUrl . "index.php");
+			header("Location: " . $_siteUrl);
 		}else{
 			if($action){
 				echo 'success';
@@ -108,7 +108,7 @@
 		$action = $main->update_provider($data,$cond);
 		
 		if(!$main->isAjax()){
-			header("Location: " . $_siteUrl . "index.php");
+			header("Location: " . $_siteUrl);
 		}else{
 			if($action){
 				echo 'success';
@@ -130,7 +130,7 @@
 		$action = $main->insert_service($data);
 		
 		if(!$main->isAjax()){
-			header("Location: " . $_siteUrl . "index.php");
+			header("Location: " . $_siteUrl);
 		}else{
 			if($action){
 				echo 'success';
@@ -151,7 +151,7 @@
 		$action = $main->update_service($data,$cond);
 		
 		if(!$main->isAjax()){
-			header("Location: " . $_siteUrl . "index.php");
+			header("Location: " . $_siteUrl);
 		}else{
 			if($action){
 				echo 'success';
@@ -187,7 +187,7 @@
 		$action = $main->insert_service_photo($service_id,$filename);
 		
 		if(!$main->isAjax()){
-			header("Location: " . $_siteUrl . "index.php");
+			header("Location: " . $_siteUrl);
 		}else{
 			if($action){
 				echo 'success';
@@ -204,7 +204,7 @@
 		$action = $main->delete_service($service_id);
 		
 		if(!$main->isAjax()){
-			header("Location: " . $_siteUrl . "index.php");
+			header("Location: " . $_siteUrl);
 		}else{
 			if($action){
 				echo 'success';
