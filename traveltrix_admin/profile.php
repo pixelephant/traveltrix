@@ -1,4 +1,5 @@
 <?php 
+include 'lib/php/config.php';
 include 'lib/php/skeleton_index.php';
 include 'lib/php/class.db.php';
 include 'lib/php/class.admin.php';

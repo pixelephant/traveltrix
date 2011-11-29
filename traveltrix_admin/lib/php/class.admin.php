@@ -2,8 +2,28 @@
 
 class admin extends db{
 	
+	protected $_upload_directory;
+	protected $_provider_profile_directory;
+	protected $_provider_profile_thumbnail_directory;
+	
+	protected $_services_directory;
+	protected $_services_thumbnail_directory;
+	
+	protected $_siteUrl;
+
 	public function __construct($debug=false){
+		
 		parent::__construct('','','','','',$debug);
+		
+		$this->_upload_directory = 'uploads/';
+		$this->_provider_profile_directory = $this->_upload_directory . 'provider_profile/';
+		$this->_provider_profile_thumbnail_directory = $this->_upload_directory . 'provider_profile_thumbnail/';
+		
+		$this->_services_directory = $this->_upload_directory . 'services/';
+		$this->_services_thumbnail_directory = $this->_upload_directory . 'services_thumbnail/';
+		
+		$this->_siteUrl = '/projects/on-going/traveltrix-git/traveltrix_admin/';
+		
 	}
 	
 	//SELECT
@@ -390,25 +410,62 @@ class admin extends db{
 		$cond['provider_id'] = (int)$_SESSION['provider_id'];
 		$cond['id'] = (int)$service_id;
 	
-		return $this->sql_delete('services',$cond);
+		if($this->sql_delete('services',$cond)){
+			return $this->delete_all_service_photos('',$service_id);
+		}else{
+			return FALSE;
+		}
 	
 	}
 	
 	public function delete_service_photo($photo,$service_id){
 	
+		if($photo == '' || $service_id == ''){
+			return FALSE;
+		}
+	
 		$cond['photo'] = $photo;
 		$cond['service_id'] = (int)$service_id;
 	
-		return $this->sql_delete('service_photos',$cond);
+		return $this->sql_delete('service_photos',$cond) && $this->delete_service_photo_files($photo);
 	
 	}
 
+	protected function delete_all_service_photos($service_id){
+	
+		$cond['service_id'] = (int)$service_id;
+		
+		$p = $this->get_service_photos($service_id);
+		$photos = array();
+		
+		for($i = 0; $i < $p['count']; $i++){
+			$photos[] = $p[$i]['photo'];
+		}
+		
+		return $this->sql_delete('service_photos',$cond) && $this->delete_service_photo_files($photos);
+	
+	}
+	
 	public function delete_guide_to_tour($guide_id,$tour_id){
 	
 		$cond['guide_id'] = (int)$guide_id;
 		$cond['service_id'] = (int)$tour_id;
 	
 		return $this->sql_delete('guide_to_tour',$cond);
+	
+	}
+	
+	protected function delete_service_photo_files($photos){
+	
+		if(is_array($photos)){
+			foreach($photos as $photo){
+				if(!unlink($this->_services_directory . $photo) && unlink($this->_services_thumbnail_directory . $photos)){
+					return FALSE;
+				}
+			}
+		}else{
+			return unlink($this->_services_directory . $photos) && unlink($this->_services_thumbnail_directory . $photos);
+		}
 	
 	}
 	
@@ -567,10 +624,10 @@ class admin extends db{
 		$html .= '<label for="photo">Photo</label><input type="file" id="photo" name="photo" />';
 		$html .= '</div>';
 		
-		if($provider[0]['photo'] != '' && is_file('uploads/provider_profile_thumbnail/' . $provider[0]['photo'])){
+		if($provider[0]['photo'] != '' && is_file($this->_provider_profile_thumbnail_directory . $provider[0]['photo'])){
 		
 			$html .= '<div class="formrow">';
-			$html .= '<img src="uploads/provider_profile_thumbnail/' . $provider[0]['photo'] . '" />';
+			$html .= '<img src="' . $this->_provider_profile_thumbnail_directory . $provider[0]['photo'] . '" />';
 			$html .= '</div>';
 		
 		}
