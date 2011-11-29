@@ -16,7 +16,7 @@ My Profile
 	<form enctype="multipart/form-data" action="lib/php/admin_process.php" method="POST">
 		<?php $main->render_edit_provider_form(); ?>
 		<div class="formrow">
-			<input type="submit" class="btn primary" value="Elküld" />
+			<input type="submit" class="btn primary" value="Submit" />
 		</div>
 	</form>
 </div>
