@@ -11,18 +11,22 @@ class admin extends db{
 	
 	protected $_siteUrl;
 
+	protected $_system_path;
+	
 	public function __construct($debug=false){
 		
 		parent::__construct('','','','','',$debug);
 		
-		$this->_upload_directory = 'uploads/';
+		$this->_siteUrl = 'projects/on-going/traveltrix-git/traveltrix_admin/';
+		
+		$this->_system_path = '/home/pixeleph/public_html/' . $this->_siteUrl;
+		
+		$this->_upload_directory = $this->_system_path . 'uploads/';
 		$this->_provider_profile_directory = $this->_upload_directory . 'provider_profile/';
 		$this->_provider_profile_thumbnail_directory = $this->_upload_directory . 'provider_profile_thumbnail/';
 		
 		$this->_services_directory = $this->_upload_directory . 'services/';
 		$this->_services_thumbnail_directory = $this->_upload_directory . 'services_thumbnail/';
-		
-		$this->_siteUrl = '/projects/on-going/traveltrix-git/traveltrix_admin/';
 		
 	}
 	
@@ -411,7 +415,7 @@ class admin extends db{
 		$cond['id'] = (int)$service_id;
 	
 		if($this->sql_delete('services',$cond)){
-			return $this->delete_all_service_photos('',$service_id);
+			return $this->delete_all_service_photos($service_id);
 		}else{
 			return FALSE;
 		}
@@ -456,10 +460,10 @@ class admin extends db{
 	}
 	
 	protected function delete_service_photo_files($photos){
-	
+		
 		if(is_array($photos)){
 			foreach($photos as $photo){
-				if(!unlink($this->_services_directory . $photo) && unlink($this->_services_thumbnail_directory . $photos)){
+				if(!unlink($this->_services_directory . $photo) || !unlink($this->_services_thumbnail_directory . $photo)){
 					return FALSE;
 				}
 			}
