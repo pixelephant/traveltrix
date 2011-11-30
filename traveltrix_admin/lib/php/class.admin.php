@@ -10,8 +10,9 @@ class admin extends db{
 	protected $_services_thumbnail_directory;
 	
 	protected $_siteUrl;
-
 	protected $_system_path;
+	
+	protected $_table_prefix = "traveltrix_";
 	
 	public function __construct($debug=false){
 		
@@ -38,7 +39,7 @@ class admin extends db{
 			$cond = GUMP::sanitize($cond);
 		}
 		
-		$table = 'providers';
+		$table = $this->_table_prefix . 'providers';
 		$col = 'id,password,name,description,email,phone,address,website,is_guide,referal_id,photo,updated_at';
 		
 		return $this->sql_select($table,$col,$cond);
@@ -51,7 +52,7 @@ class admin extends db{
 			$cond = GUMP::sanitize($cond);
 		}
 	
-		$table = 'categories';
+		$table = $this->_table_prefix . 'categories';
 		$col = 'id,category_name';
 		
 		return $this->sql_select($table,$col,$cond);
@@ -64,7 +65,7 @@ class admin extends db{
 			$cond = GUMP::sanitize($cond);
 		}
 	
-		$table = 'services';
+		$table = $this->_table_prefix . 'services';
 		$col = 'id,service_name,short_description,long_description,category_id,duration,price,provider_id,is_tour,updated_at';
 		
 		return $this->sql_select($table,$col,$cond);
@@ -73,7 +74,7 @@ class admin extends db{
 	
 	public function get_service_photos($service_id){
 	
-		$table = 'service_photos';
+		$table = $this->_table_prefix . 'service_photos';
 		$col = 'service_id,photo';
 		
 		$cond['service_id'] = (int)$service_id;
@@ -88,7 +89,7 @@ class admin extends db{
 			return FALSE;
 		}
 	
-		$table = 'guide_to_tour';
+		$table = $this->_table_prefix . 'guide_to_tour';
 		$col = 'id,guide_id,service_id';
 		
 		if($tour_id != ''){
@@ -145,7 +146,7 @@ class admin extends db{
 		//Validálás vége
 		
 		if($validate === TRUE){
-			return $this->sql_insert('providers',$params);
+			return $this->sql_insert($this->_table_prefix . 'providers',$params);
 		}else{
 			print_r($validate);
 		}
@@ -200,7 +201,7 @@ class admin extends db{
 		//Validálás vége
 		
 		if($validate === TRUE){
-			return $this->sql_insert('services',$params);
+			return $this->sql_insert($this->_table_prefix . 'services',$params);
 		}else{
 			print_r($validate);
 		}
@@ -213,7 +214,7 @@ class admin extends db{
 	
 		$params = GUMP::sanitize($params);
 		
-		return $this->sql_insert('service_photos',$params);
+		return $this->sql_insert($this->_table_prefix . 'service_photos',$params);
 	}
 	
 	public function insert_guide_to_tour($guide_id,$tour_id){
@@ -240,7 +241,7 @@ class admin extends db{
 		//Validálás vége
 		
 		if($validate === TRUE){
-			return $this->sql_insert('guide_to_tour',$params);
+			return $this->sql_insert($this->_table_prefix . 'guide_to_tour',$params);
 		}else{
 			print_r($validate);
 		}
@@ -288,7 +289,7 @@ class admin extends db{
 		//Validálás vége
 		
 		if($validate === TRUE && $validate2 === TRUE){
-			return $this->sql_update('providers',$data_array,$cond);
+			return $this->sql_update($this->_table_prefix . 'providers',$data_array,$cond);
 		}else{
 			print_r($validate);
 			print_r($validate2);
@@ -333,7 +334,7 @@ class admin extends db{
 		//Validálás vége
 		
 		if($validate === TRUE && $validate2 === TRUE){
-			return $this->sql_update('services',$data_array,$cond);
+			return $this->sql_update($this->_table_prefix . 'services',$data_array,$cond);
 		}else{
 			print_r($validate);
 			print_r($validate2);
