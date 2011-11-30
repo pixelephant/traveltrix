@@ -1,8 +1,6 @@
 <?php 
 include 'lib/php/skeleton_index.php';
-include 'lib/php/class.db.php';
-include 'lib/php/class.admin.php';
-include 'lib/ext/Wixel/gump.class.php';
+include 'lib/php/include_admin.php';
 
 $main = new admin();
 
