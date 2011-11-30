@@ -1,11 +1,10 @@
 <?php
 	header("Content-Type: text/html; charset=utf-8");
 	session_start();
-	$_SESSION['provider_id'] = 3;
-	$_SESSION['is_guide'] = 1;
-//	if(!isset($_SESSION['provider_id'])){
-//		header("Location: login.php");
-//	}
+
+	if(!isset($_SESSION['provider_id'])){
+		header("Location: login.php");
+	}
 	
 	error_reporting(E_ALL);
 	
@@ -45,6 +44,7 @@
 				<li><a href="orders">Orders</a></li>
 				<li><a href="settings">Settings</a></li>
 				<li><a href="invitations">Invitations</a></li>
+				<li><a href="logout">Logout</a></li>
 			</ul>
 			<footer id="help">
 				<h3>Need help?</h3>

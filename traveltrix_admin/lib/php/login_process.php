@@ -9,7 +9,7 @@ include '../ext/Wixel/gump.class.php';
 
 $main = new admin(true);
 
-if($_POST['action'] == 'login'){
+if($_POST['action'] == 'login' && ( $_SESSION['token'] == $_POST['token'] ) ){
 
 	$cond['email'] = $_POST['email'];
 	$cond['password'] = $_POST['password'];
